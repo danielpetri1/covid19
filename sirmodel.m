@@ -1,9 +1,6 @@
 %x(1) is Susceptible, x(2) is Infected, x(3) is Recovered
 %D = 1 / b is days to recover from disease, i.e. 14 days. b = 1 / 14
 %R_0 = a / b; assuming R_0 = 1.4, we know a = R_0 * b = 1.4 / 14 = 0.1
-
-figure
-
 a = 0.1; %Contact rate
 b = 1 / 14; %Recovery rate
 
