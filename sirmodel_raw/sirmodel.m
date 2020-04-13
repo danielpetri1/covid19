@@ -18,5 +18,6 @@ tfinal = 700;
  plot(t,xa(:,2),'k')
  plot(t,xa(:,3),'r')
  hold off
+
  
  legend({'susceptible','infected', 'recovered'},'Location','northeast')
