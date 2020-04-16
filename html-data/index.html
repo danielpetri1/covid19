@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>	
+	<head>
+		<meta charset = "utf-8">
+		<title>HackaTUM 2020</title>
+		<link href = "style.css" type = "text/css" rel = "stylesheet">
+		<script src="https://unpkg.com/mathjs@6.6.4/dist/math.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<style>
+			body {
+				font-family: sans-serif;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>How many lives can I save by social distancing?</h1>
+		<div class="slideContainer">
+			<input type="range" min="0" max="100" value="0" id="myRange" class="slider">
+		</div>
+		
+	<script>
+
+    function ndsolve(f, x0, dt, tmax) {
+      const n = f.size()[0]  // Number of variables
+      const x = x0.clone()   // Current values of variables
+      const dxdt = []        // Temporary variable to hold time-derivatives
+      const result = []      // Contains entire solution
+
+      const nsteps = math.divide(tmax, dt)   // Number of time steps
+      for(let i=0; i<nsteps; i++) {
+        // Compute derivatives
+        for(let j=0; j<n; j++) {
+          dxdt[j] = f.get([j]).apply(null, x.toArray())
+        }
+        // Euler method to compute next time step
+        for(let j=0; j<n; j++) {
+          x.set([j], math.add(x.get([j]), math.multiply(dxdt[j], dt)))
+        }
+        result.push(x.clone())
+      }
+
+      return math.matrix(result)
+    }
+
+    // Import the numerical ODE solver
+    math.import({ndsolve:ndsolve})
+
+    // Create a math.js context for our simulation. Everything else occurs in the context of the expression parser!
+
+    const sim = math.parser()
+
+    sim.evaluate("s0 = 0.99")
+    sim.evaluate("i0 = 0.01")
+    sim.evaluate("r0 = 0.0")
+    sim.evaluate("dt = 1.0")                      // Simulation timestep
+    sim.evaluate("tfinal = 300.0")                  // Simulation duration
+
+    //assuming a = 0.1, b = 1/14 = 0.0714
+    sim.evaluate("dsdt(s,i,r) = -0.1 * s * i")
+    sim.evaluate("didt(s,i,r) = 0.1 * s * i - (0.0714 * i)")
+    sim.evaluate("drdt(s,i,r) = 0.0714 * i")
+
+    const result = sim.evaluate("resultmatrix = ndsolve([dsdt, didt, drdt], [s0, i0, r0], dt, tfinal)").toString()
+    //sim.evaluate("")
+    //sim.evaluate("")
+    //sim.evaluate("")
+
+    document.write(result)
+
+	</script>
+	</body>
+</html>
