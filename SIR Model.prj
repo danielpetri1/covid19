@@ -1,14 +1,22 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration file="C:\Users\Daniel\Documents\covid19\sirmodel.prj" location="C:\Users\Daniel\Documents\covid19" name="sirmodel" target="target.mlapps" target-name="Package App">
-    <param.appname>sirmodel</param.appname>
+  <configuration build-checksum="3095871199" file="C:\Users\Daniel\Documents\covid19\SIR Model.prj" location="C:\Users\Daniel\Documents\covid19" name="SIR Model" target="target.mlapps" target-name="Package App">
+    <param.appname>SIR Model</param.appname>
     <param.authnamewatermark />
     <param.email />
     <param.company />
     <param.icon />
     <param.icons />
     <param.summary />
-    <param.description />
-    <param.screenshot>C:\Users\Daniel\AppData\Local\Temp\tpf69a99a1_2f77_4f05_8460_c08eedcf091b.png</param.screenshot>
+    <param.description>A simple SIR model to simulate the spread of a disease given the following starting values as input:
+
+- % infected
+- Contact rate
+- Recovery rate
+- Max. time
+- % removed
+
+R_eff is also calculated.</param.description>
+    <param.screenshot>C:\Users\Daniel\AppData\Local\Temp\tpeb00a037_249c_451c_a9e0_45e3dbe7c142.png</param.screenshot>
     <param.version>1.0</param.version>
     <param.products.name />
     <param.products.id />
@@ -23,7 +31,6 @@
       <param.icon />
       <param.icons />
       <param.summary />
-      <param.description />
       <param.version />
       <param.products.name />
       <param.products.id />
