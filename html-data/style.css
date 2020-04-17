@@ -1,3 +1,5 @@
+/* SLIDER CSS START */
+
 .slidecontainer {
   width: 100%; /* Width of the outside container */
 }
@@ -36,3 +38,9 @@
   background: #0065BD; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
+
+p {
+  margin-top: 20px;
+}
+
+/* SLIDER CSS END */
