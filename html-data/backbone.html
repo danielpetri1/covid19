@@ -61,14 +61,15 @@
     var numOfPopulation = "100000"
     var recoveryRateInRegion = "0.55" //TODO: update daily for EVERY region
 
+    //TODO: check recoveryRateInRegion is <= 0.98 otherwise we crash
 
-    var sdvalue = "0.3"
+    var sdvalue = "0.5"
     //-------------- INPUT FROM USER ----------------
 
     function calcLivesSaved(nameOfCity, numOfCases, numOfPopulation, recoveryRateInRegion, sdvalue){ //OUR MAIN FUNCTION
 
       const sim = math.parser()
-      var tfinal = "500" //how long the simulation keeps going... Always input an integer in string representation here!!
+      var tfinal = "700" //how long the simulation keeps going... Always input an integer in string representation here!!
 
       console.log(sim.evaluate("estimatedRecovered = " + recoveryRateInRegion + " * " + numOfCases).toString()) //TODO: remove console.log / toString wrapper
       console.log(sim.evaluate("estimatedDead = 0.02 * " + numOfCases).toString())
@@ -77,28 +78,49 @@
       console.log(sim.evaluate("infectedPercentage = 1 - 0.02 - " + recoveryRateInRegion).toString())
       console.log(sim.evaluate("estimatedInfected = infectedPercentage * " + numOfCases).toString())
 
-      sim.evaluate("s0 = 0.99")
-      sim.evaluate("i0 = 0.01")
-      sim.evaluate("r0 = 0.0")
+      console.log(sim.evaluate("i0 = estimatedInfected / " + numOfPopulation).toString())
+      console.log(sim.evaluate("r0 = estimatedRemoved / " + numOfPopulation).toString())
+      console.log(sim.evaluate("s0 = 1 - i0 - r0").toString())
+
       sim.evaluate("dt = 1.0")   // Simulation timestep
       sim.evaluate("tfinal = " + tfinal + ".0") // Simulation duration
 
-      var a = "0.07470941883767536" //Always input the number as string here so Math.js can handle it with its own representation of the numbers!
-      var b = "0.0714"
-      sim.evaluate("dsdt(s,i,r) = - " + a + " * s * i")
-      sim.evaluate("didt(s,i,r) = " + a + " * s * i - (" + b + " * i)")
-      sim.evaluate("drdt(s,i,r) = " + b + " * i")
+      //Calculate deaths in 0% social distancing case
+      sim.evaluate("b = 0.0714286") //approx. 1/14
+      console.log(sim.evaluate("a = 2.7 * b  / s0").toString()) //Always input the number as string here so Math.js can handle it with its own representation of the numbers!
+      sim.evaluate("dsdt(s,i,r) = - a * s * i")
+      sim.evaluate("didt(s,i,r) = a * s * i - (b * i)")
+      sim.evaluate("drdt(s,i,r) = b * i")
 
-      const resultmatrix = sim.evaluate("resultmatrix = ndsolve([dsdt, didt, drdt], [s0, i0, r0], dt, tfinal)").toString()
-      const result = sim.evaluate("resultmatrix.subset(index(" + tfinal + ", 3))").toString()
-      return result
+      const matrix0sd = sim.evaluate("resultmatrix = ndsolve([dsdt, didt, drdt], [s0, i0, r0], dt, tfinal)").toString()
+      console.log(sim.evaluate("percentage0sd = resultmatrix.subset(index(" + tfinal + ", 3))").toString())
+
+
+      //Calculate contact rate for 100% social distancing value (needed for interpolation)
+      console.log(sim.evaluate("a_min = 0.3 * b / s0").toString())
+
+      //Find the contact rate corresponding to the given sd value
+      console.log(sim.evaluate("a_sd = (a_min - a) * " + sdvalue + " + a").toString())
+
+      sim.evaluate("dsdt_sd(s,i,r) = - a_sd * s * i")
+      sim.evaluate("didt_sd(s,i,r) = a_sd * s * i - (b * i)")
+      sim.evaluate("drdt_sd(s,i,r) = b * i")
+
+      const matrix_sd = sim.evaluate("sd_matrix = ndsolve([dsdt_sd, didt_sd, drdt_sd], [s0, i0, r0], dt, tfinal)").toString()
+      console.log(sim.evaluate("percentage_sd = sd_matrix.subset(index(" + tfinal + ", 3))").toString())
+
+      //TODO: check that percentage_sd <= percentage0sd (otherwise makes no sense!)
+      const result = sim.evaluate("result = round((percentage0sd - percentage_sd) * 0.02 * " + numOfPopulation + ")").toString()
+      const r_eff = sim.evaluate("r_eff = (a_sd / b) * s0").toString()
+      return [result, r_eff]
     }
   </script>
 
   <script>
     var result = calcLivesSaved(nameOfCity, numOfCases, numOfPopulation, recoveryRateInRegion, sdvalue)
     //document.write("Number of removed people: " + result + " with a = " + a + " and b = " + b)
-    document.write("Number of removed people: " + result)
+    document.write("Number of saved people: " + result[0] + ", ")
+    document.write("R_eff = " + result[1])
     //document.write(resultmatrix)
   </script>
 
