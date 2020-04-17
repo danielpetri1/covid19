@@ -341,23 +341,27 @@ img {
 
 /* SLIDER CSS START */
 
-#body.home div.slidecontainer {
+.slidecontainer {
+	background-color: violet;
 	margin: 0;
 	max-width: none;
 	width: 100%;
 }
 
-#body.home div.slidecontainer div{
-	background-color: violet;
+.slidecontainer div{
 	max-width: 960px;
+	display: block;
 	margin: 0 auto;
 }
 
-
-  
-#body.home div.slidecontainer div p{
-	color: black;
+#body.home div.percent{
+	max-width: 960px;
 	display: block;
+	margin: 0 auto;
+}
+  
+#body.home div.percent p{
+	color: black;
 	font-family: roboto-regular-webfont;
 	font-size: 15px;
 	font-weight: normal;
@@ -369,10 +373,12 @@ img {
 }
 
   /* The slider itself */
-  .slider {
+.slider {
+	display: block;
+	margin: 0 auto;
 	-webkit-appearance: none;  /* Override default CSS styles */
 	appearance: none;
-	width: 100%; /* Full-width */
+	width: 960px; /* Full-width */
 	height: 25px; /* Specified height */
 	background: #d3d3d3; /* Grey background */
 	outline: none; /* Remove outline */
@@ -382,7 +388,7 @@ img {
   }
   
   /* Mouse-over effects */
-  .slider:hover {
+.slider:hover {
 	opacity: 1; /* Fully shown on mouse-over */
   }
   
@@ -396,7 +402,7 @@ img {
 	cursor: pointer; /* Cursor on hover */
   }
   
-  .slider::-moz-range-thumb {
+.slider::-moz-range-thumb {
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
 	background: #0065BD; /* Green background */
