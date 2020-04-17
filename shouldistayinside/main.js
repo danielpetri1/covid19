@@ -7,7 +7,7 @@ var result = document.getElementById("result_header");
 
 slider.oninput = function () {
     sd_factor.innerHTML = this.value;
-    result_header.innerHTML = calcLivesSaved("Munich", "4563", "1471508", "0.52777", this.value / 100)[0];
+    result_header.innerHTML = calcLivesSaved("Munich", "4563", "1471508", "Bayern", this.value / 100)[0];
 }
 
 // FUNCTION TO DISPLAY OUTPUT
@@ -15,9 +15,28 @@ function square(num) {
     return num * num;
 }
 
-    //-------------------------- BACKBONE ------------------------------
+//-------------------------- BACKBONE ------------------------------
 
-    // ------------------- ACTIVATE FOR MAXIMUM
+    // ---------- RECOVERY RATES (Genesen / Covid19Faelle) --------------
+    var bayern = "0.53293" 
+    var nordrheinWestfalen = "0.69922"
+    var badenWuerttemberg = "0.55758"
+    var niedersachsen = "0.66335"
+    var hessen = "0.65671"
+    var rheinlandPfalz = "0.67166"
+    var berlin = "0.52578"
+    var sachsen = "0.5681"
+    var hamburg = "0.5681"
+    var schleswigHolstein = "0.68"
+    var saarland = "0.57675"
+    var brandenburg = "0.666"
+    var thueringen = "0.6875"
+    var sachenAnhalt = "0.75"
+    var mecklenburg = "0.78"
+    var bremen = "0.72"
+    // ---------- RECOVERY RATES --------------
+    
+    // ------------------- ACTIVATE FOR MAXIMUM PRECISION ---------------
     //math.config({
     //number: 'BigNumber',      // Default type of number:
     //                        // 'number' (default), 'BigNumber', or 'Fraction'
@@ -51,7 +70,44 @@ function square(num) {
 
     // Create a math.js context for our simulation. Everything else occurs in the context of the expression parser!
 
-    function calcLivesSaved(nameOfCity, numOfCases, numOfPopulation, recoveryRateInRegion, sdvalue){ //OUR MAIN FUNCTION
+    function calcLivesSaved(nameOfCity, numOfCases, numOfPopulation, nameOfRegion, sdvalue){ //OUR MAIN FUNCTION
+
+      var recoveryRateInRegion = "INVALID"
+      if (nameOfRegion == "Bayern"){
+        recoveryRateInRegion = bayern
+      } else if (nameOfRegion == "Nordrhein-Westfalen"){
+        recoveryRateInRegion = nordrheinWestfalen
+      } else if (nameOfRegion == "Baden-Württemberg"){
+        recoveryRateInRegion = badenWuerttemberg
+      } else if (nameOfRegion == "Niedersachsen"){
+        recoveryRateInRegion = niedersachsen
+      } else if (nameOfRegion == "Hessen"){
+        recoveryRateInRegion = hessen
+      } else if (nameOfRegion == "Rheinland-Pfalz"){
+        recoveryRateInRegion = rheinlandPfalz
+      } else if (nameOfRegion == "Berlin"){
+        recoveryRateInRegion = berlin
+      } else if (nameOfRegion == "Sachsen"){
+        recoveryRateInRegion = sachsen
+      } else if (nameOfRegion == "Hamburg"){
+        recoveryRateInRegion = hamburg
+      } else if (nameOfRegion == "Schleswig-Holstein"){
+        recoveryRateInRegion = schleswigBaden-WürttembergHolstein
+      } else if (nameOfRegion == "Saarland"){
+        recoveryRateInRegion = saarland
+      } else if (nameOfRegion == "Brandenburg"){
+        recoveryRateInRegion = brandenburg
+      } else if (nameOfRegion == "Thüringen"){
+        recoveryRateInRegion = thueringen
+      } else if (nameOfRegion == "Sachsen-Anhalt"){
+        recoveryRateInRegion = sachenAnhalt
+      } else if (nameOfRegion == "Mecklenburg-Vorpommern"){
+        recoveryRateInRegion = mecklenburg
+      } else if (nameOfRegion == "Bremen"){
+        recoveryRateInRegion = bremen
+      } else {
+        throw "Internal error 0: invalid nameOfRegion"
+      }
 
       if (parseFloat(numOfCases) < 0.0 || parseFloat(numOfPopulation) <= 0.0 
           || parseFloat(recoveryRateInRegion) < 0.0 || parseFloat(recoveryRateInRegion) > 0.98
