@@ -1,0 +1,362 @@
+/* Website template by freewebsitetemplates.com */
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: auto;
+}
+body #page {
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+a:active {
+	background: none;
+}
+img {
+	border: none;
+}
+/*-------------------------------------------FONTS---------------------------------------------*/
+@font-face {
+	font-family: 'roboto-regular-webfont';
+	src: url('../fonts/roboto-regular-webfont.eot');
+	src: url('../fonts/roboto-regular-webfont.woff') format('woff'), url('../fonts/roboto-regular-webfont.ttf') format('truetype'), url('../fonts/roboto-regular-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'quicksand-bold-webfont';
+	src: url('../fonts/quicksand-bold-webfont.eot');
+	src: url('../fonts/quicksand-bold-webfont.woff') format('woff'), url('../fonts/quicksand-bold-webfont.ttf') format('truetype'), url('../fonts/quicksand-bold-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'magra-bold-webfont';
+	src: url('../fonts/magra-bold-webfont.eot');
+	src: url('../fonts/magra-bold-webfont.woff') format('woff'), url('../fonts/magra-bold-webfont.ttf') format('truetype'), url('../fonts/magra-bold-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'lato-regular-webfont';
+	src: url('../fonts/lato-regular-webfont.eot');
+	src: url('../fonts/lato-regular-webfont.woff') format('woff'), url('../fonts/lato-regular-webfont.ttf') format('truetype'), url('../fonts/lato-regular-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: 'lato-bold-webfont';
+	src: url('../fonts/lato-bold-webfont.eot');
+	src: url('../fonts/lato-bold-webfont.woff') format('woff'), url('../fonts/lato-bold-webfont.ttf') format('truetype'), url('../fonts/lato-bold-webfont.svg') format('svg');
+}
+/*----------------------------------------header-styles---------------------------------------*/
+#header {
+	background-color: #a59fa196;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+/*scales the header div*/
+#header div {
+	margin: 0 auto;
+	max-width: 10000px;
+	overflow: hidden;
+	padding: 41px 10px 27px;
+}
+
+/*says where the block inside header div is */
+#header div ul {
+	display: inline-block;
+	float: left;
+	list-style: none outside none;
+	margin: 0 auto;
+	padding: 17px 0 0;
+	text-align: center;
+	width: auto;
+}
+#header div ul li {
+	display: inline-block;
+	*float: left; /* Needed for IE7 and old versions */
+	margin: 0 35px;
+	padding: 0;
+	position: relative;
+	width: auto;
+}
+#header div ul li a {
+	color: #7a6666;
+	font-family: lato-regular-webfont;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+/*colour of the selected link*/
+#header div ul li.selected a, #header div ul li.selected a:hover {
+	color: #145897;
+}
+
+#header div ul li.menu {
+	min-height: 35px;
+	z-index: 80;
+}
+
+/*----------------------------------------body-home-styles---------------------------------------*/
+#body.home {
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+/*werte für den header des bodies*/
+#body.home div.header {
+	margin: 0;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+#body.home div.header div {
+	margin: 0 auto;
+	max-width: 960px;
+	min-height: 180px;
+	padding: 0;
+	position: relative;
+}
+
+
+/*Das ist eine Art button. Ich will es für später noch drinnen lassen.*/
+/* 
+#body.home div.header div a {
+	background: url(../images/icons.png) no-repeat 0 -128px;
+	color: #FFFFFF;
+	display: block;
+	font-family: quicksand-bold-webfont;
+	font-size: 24px;
+	font-weight: normal;
+	height: 99px;
+	line-height: 24px;
+	margin: 0;
+	padding: 52px 0 0;
+	position: absolute;
+	right: 130px;
+	text-align: center;
+	text-transform: lowercase;
+	top: 437px;
+	width: 156px;
+	z-index: 90;
+}
+*/
+
+
+#body.home div.header div h1 {
+	float: central;
+	color: rgb(20, 20, 20);
+	display: block;
+	font-family: lato-bold-webfont;
+	font-size: 40px;
+	font-weight: normal;
+	line-height: 24px;
+	margin: 0;
+	padding: 47px 0 0;
+	text-align: central;
+	text-transform: none;
+	width: auto;
+}
+
+
+#body.home div.body {
+	margin: 0;
+	max-width: none;
+	padding: 0;
+	width: 100%;
+}
+#body.home div.body div {
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 0;
+}
+
+#body.home div.body p{
+	color: black;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 50px;
+	text-align: center;
+	float: center;
+	text-transform: none
+}
+
+#body.home div.body div button{
+	background-color: white;
+	border: 2px solid black;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 15px;
+	border-radius: 50%;
+	transition-duration: 0.4s;
+	float: right;
+}
+
+
+#body.home div.body div button:hover {
+	background-color: #145897; 
+	color: white;
+	/*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+	border-radius: 50%;
+}
+
+#body.home div.body div div {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 0;
+	width: 100%;
+}
+
+
+#body.home div.body div div p{
+	color: green;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 120px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 80px;
+	text-align: center;
+	text-transform: none
+}
+
+#body.home div.footer {
+	margin: 0;
+	max-width: none;
+	padding: 0 0 350px;
+	width: 100%;
+}
+
+#body.home div.footer div{
+	width: 75%;
+	float: right;
+}
+
+#body.home div.footer div p{
+	color: black;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 80px;
+	text-align: left;
+	text-transform: uppercase;
+	width: 66.7%;
+}
+
+
+
+/*Ich weiß nicht wofür das gut ist.*/
+/*
+#body.home div.body div div p a {
+	color: #e0e9e0;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	text-decoration: underline;
+}
+#body.home div.body div div p a:hover {
+	color: #11c921;
+}
+*/
+
+/*----------------------------------------body-styles---------------------------------------*/
+
+#body div.footer .section p a {
+}
+#body div.footer .section p a:hover {
+}
+/*----------------------------------------footer-styles---------------------------------------*/
+#footer {
+	background-color: #a59fa196;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#footer div {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 59px 0 13px;
+	width: 85%;
+}
+#footer div a {
+	color: black;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 12px;
+	font-weight: normal;
+	float: right;
+	text-transform: none;
+}
+
+#footer div p {
+	color: #FFFFFF;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 33px 0 50px;
+	text-align: center;
+	text-transform: none
+}
+#footer div .connect {
+	float: right;
+	display: inline-block;
+	height: 30px;
+	margin: 0 auto;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+}
+
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: right;
+	height: 30px;
+	margin: 0 15px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 30px;
+}
+#footer div .connect a.github {
+	background-position: 0 0;
+}
+#footer div .connect a.googleplus {
+	background-position: 0 -32px;
+}
+#footer div .connect a.pinterest {
+	background-position: 0 -64px;
+}
+#footer div .connect a.twitter {
+	background-position: 0 -96px;
+}
