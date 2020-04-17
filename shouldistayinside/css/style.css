@@ -109,20 +109,14 @@ img {
 	float: right;
 	display: block;
 	height: 30px;
-	margin: 0 auto;
-	max-width: none;
-	overflow: hidden;
-	padding: 0;
 	width: auto;
 }
 
 #header div .connect a {
 	background: url(../images/icons.png) no-repeat;
 	display: block;
-	float: right;
 	height: 50px;
-	margin: 0 15px;
-	padding: 0;
+	padding-top: 10px;
 	text-indent: -99999px;
 	width: 50px;
 }
@@ -171,7 +165,7 @@ img {
 	margin: 0;
 	max-width: none;
 	overflow: hidden;
-	padding: 0 0 70px;
+	padding: 0 0 35px;
 	width: 100%;
 }
 #body.home div.body div {
@@ -184,8 +178,9 @@ img {
 	color: #333333;
 	display: block;
 	margin: 0 auto;
+	padding-bottom: 40px;
 	float: initial;
-	font-size: 150px;
+	font-size: 200px;
 	text-align: center;
 	font-family: Arial, Sans-Serif, Helvetica;
 }
@@ -200,35 +195,16 @@ img {
 	color: black;
 	display: block;
 	font-family: roboto-regular-webfont;
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: normal;
 	line-height: 10px;
 	margin: 0;
 	padding: 33px 0 50px;
-	text-transform: none;
+	text-transform: lowercase;
 	text-align: center;
 }
 
 
-/*Button for changing the city*/
-#body.home div.body div button{
-	background-color: #0065BD;
-	border: 2px solid black;
-	color: #FFFFFF;
-	display: block;
-	margin: 0 auto;
-	padding: 13px  30px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 15px;
-	transition-duration: 0.4s;
-}
-
-
-#body.home div.body div button:hover {
-	background-color: #003359; 
-	color: white;
-}
 
 #body.home div.body div div {
 	float: left;
@@ -273,14 +249,14 @@ img {
 	line-height: 15px;
 	margin: 0 20px;
 	padding: 10px 0 10px;
-	text-align: left;
+	text-align: justify;
 	text-transform: none;
 }
 
 #body.home div.footer div details{
 	color: black;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 25px;
+	font-size: 18px;
 	display: block;
 	margin: 50px auto;
 	text-align: left;
@@ -337,7 +313,7 @@ img {
 	margin: 0;
 	padding: 33px 0 50px;
 	text-align: center;
-	text-transform: none
+	text-transform: none;
 }
 
 
@@ -355,6 +331,8 @@ img {
 	margin: 0 auto;
 }
 
+
+/*This tells the social distancing percentage.*/
 #body.home div.percent{
 	max-width: 960px;
 	display: block;
