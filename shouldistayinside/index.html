@@ -1,79 +1,91 @@
 <!doctype html>
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9948073-6"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+	
+		gtag('config', 'UA-9948073-6');
+	</script>
+	
+	<!-- Google Analytics End -->
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>shouldistayhome</title>
+	<title>Should I stay at home?</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	
 	<script src="js/mobile.js" type="text/javascript"></script>
+	<script src="https://unpkg.com/mathjs@6.6.4/dist/math.min.js"></script>
 </head>
 
-
 <body>
-
 	<div id="page">
-
-
 		<div id="header">
 			<div>
 				<ul id="navigation">
-
 					<li class="selected">
-						<a href="index.html">Home</a>
+						<a href="index.html">🏠</a>
 					</li>
-
 					<li class="menu">
-						<a href="about.html">About</a>
+						<a href="about.html">❓</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 
-
-
-
-
 		<div id="body" class="home">
-
-
 			<div class="header">
 				<div>
-					<h1>How many lives can I save by social distancing today?</h1>
+					<style>
+						#title_header {
+						  color:black;
+						  text-align: center;
+						  font-family: lato-regular-webfont;
+						  font-size: 37px;
+						  }
+					  </style>
+
+					<h2 id = "title_header">How many lives can be saved by social distancing in my city?</h2>
 				</div>
 			</div>
 			
 			<div class="body">
-
 				<div>
-
 					<div>
-						<p>0</p>
+						<style>
+							#result_header {
+							  color: #333333;
+							  font-size: 120px;
+							  text-align: center;
+							  font-family: Arial, Helvetica, sans-serif;
+							  }
+						  </style>
+
+						<h1 id="result_header">0</h1>
 					</div>
 
 					<p>PEOPLE IN MUNICH</p>	
 
-					
 					<button type="button">Change City</button>
-					 
 				</div>
-
-				 
-
+			</div>
+			
+			<div class="slideContainer">
+				<input type="range" min="0" max="100" value="0" id="myRange" class="slider">
 			</div>
 
 			<div class="footer">
 				<div>
-					<p>Social Distancing Parameter</p>
-					<div>
-						<p>Hier kommt ein wunderschöner Slider hin!</p>
-					</div>
-					<p>Details für nerds</p>
-					<p>About</p>
+					<p>🧑‍🤝‍🧑 Social distancing factor: <span id = "sd_factor"></span></p>
+					<p>🤓 Details für nerds</p>
+					<p>📝 About</p>
 				</div>
 			</div>
-
-
 
 		<div id="footer">
 			<div>
@@ -84,8 +96,9 @@
 				<p>&copy; We got this fam!</p>
 			</div>
 		</div>
-
-
 	</div>
 </body>
+
+<script src = "main.js"></script>
+
 </html>
