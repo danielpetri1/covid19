@@ -49,7 +49,7 @@ img {
 }
 /*----------------------------------------header-styles---------------------------------------*/
 #header {
-	background-color: #a59fa196;
+	background-color: #CCCCC6;
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -83,7 +83,7 @@ img {
 	width: auto;
 }
 #header div ul li a {
-	color: #7a6666;
+	color: #0065BD;
 	font-family: lato-regular-webfont;
 	font-size: 20px;
 	font-weight: normal;
@@ -95,7 +95,7 @@ img {
 }
 /*colour of the selected link*/
 #header div ul li.selected a, #header div ul li.selected a:hover {
-	color: #145897;
+	color: #ffffff;
 }
 
 #header div ul li.menu {
@@ -124,7 +124,7 @@ img {
 #body.home div.header div {
 	margin: 0 auto;
 	max-width: 960px;
-	min-height: 180px;
+	min-height: 140px;
 	padding: 0;
 	position: relative;
 }
@@ -156,44 +156,44 @@ img {
 }
 #body.home div.body div {
 	margin: 0 auto;
-	max-width: 500px;
+	max-width: 300px;
 	min-height: 120px;
 	padding: 0;
-	position: relative;
+	float: central;
 }
 
 /*Text: how many people live in munich*/
 #body.home div.body p{
 	color: black;
-	display: inline-block;
+	display: block;
 	font-family: roboto-regular-webfont;
 	font-size: 30px;
 	font-weight: normal;
-	line-height: 15px;
+	line-height: 10px;
 	margin: 0;
 	padding: 33px 0 50px;
 	text-transform: none;
-	
+	text-align: center;
 }
 
 
 /*Button for changing the city*/
 #body.home div.body div button{
-	background-color: white;
+	background-color: #0065BD;
 	border: 2px solid black;
-	color: black;
-	display: inline-block;
-	padding: 15px  32px;
+	color: #FFFFFF;
+	display: block;
+	margin: 0 auto;
+	padding: 13px  30px;
 	text-align: center;
 	text-decoration: none;
 	font-size: 15px;
 	transition-duration: 0.4s;
-	position: relative;
 }
 
 
 #body.home div.body div button:hover {
-	background-color: #145897; 
+	background-color: #003359; 
 	color: white;
 }
 
@@ -206,14 +206,14 @@ img {
 
 
 #body.home div.body div div p{
-	color: green;
+	color: #0065BD;
 	display: block;
 	font-family: roboto-regular-webfont;
-	font-size: 120px;
+	font-size: 200px;
 	font-weight: normal;
 	line-height: 15px;
 	margin: 0;
-	padding: 33px 0 80px;
+	padding: 85px 0 100px;
 	text-align: center;
 	text-transform: none
 }
@@ -253,7 +253,7 @@ img {
 }
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
-	background-color: #a59fa196;
+	background-color: #CCCCC6;
 	margin: 0;
 	padding: 0;
 	width: 100%;
