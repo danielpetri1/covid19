@@ -59,7 +59,7 @@ img {
 /*scales the header div*/
 #header div {
 	margin: 0 auto;
-	max-width: 10000px;
+	max-width: 1160px;
 	overflow: hidden;
 	padding: 0px 0px 0px;
 }
@@ -71,8 +71,8 @@ img {
 	list-style: none outside none;
 	margin: 0 auto;
 	padding: 17px 0 0;
-	text-align: center;
 	width: auto;
+	text-align: center;
 }
 #header div ul li {
 	display: inline-block;
@@ -103,6 +103,35 @@ img {
 	z-index: 80;
 }
 
+/*Github icon stuff -----------------------*/
+
+#header div .connect {
+	float: right;
+	display: block;
+	height: 30px;
+	margin: 0 auto;
+	max-width: none;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+}
+
+#header div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	float: right;
+	height: 50px;
+	margin: 0 15px;
+	padding: 0;
+	text-indent: -99999px;
+	width: 50px;
+}
+#header div .connect a.github {
+	background-position: 0 0;
+}
+
+
+
 /*----------------------------------------body-home-styles---------------------------------------*/
 #body.home {
 	margin: 0;
@@ -123,7 +152,7 @@ img {
 
 #body.home div.header div {
 	margin: 0 auto;
-	max-width: auto;
+	max-width: 1160px;
 	padding: 50px 0 20px;
 	position: relative;
 	text-align: center;
@@ -154,8 +183,9 @@ img {
 #body.home div.body div h1 {
 	color: #333333;
 	display: block;
+	margin: 0 auto;
 	float: initial;
-	font-size: 120px;
+	font-size: 150px;
 	text-align: center;
 	font-family: Arial, Sans-Serif, Helvetica;
 }
@@ -229,8 +259,8 @@ img {
 }
 
 #body.home div.footer div{
-	margin: 0 auto;
-	width: 960px;
+	margin: 150px auto;
+	max-width: 960px;
 	text-align: center;
 }
 
@@ -241,14 +271,18 @@ img {
 	font-size: 15px;
 	font-weight: normal;
 	line-height: 15px;
-	margin: 0;
+	margin: 0 20px;
 	padding: 10px 0 10px;
 	text-align: left;
 	text-transform: none;
 }
 
 #body.home div.footer div details{
-	margin: 50px;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	display: block;
+	margin: 50px auto;
 	text-align: left;
 }
 
@@ -281,23 +315,23 @@ img {
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 59px 0 13px; /* 59 0 13 */
-	width: 85%;
+	max-width: 960px;
 }
 #footer div a {
 	color: black;
 	display: block;
 	font-family: roboto-regular-webfont;
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: normal;
 	float: right;
 	text-transform: none;
 }
 
 #footer div p {
-	color: #0065BD;
+	color: black;
 	display: block;
 	font-family: roboto-regular-webfont;
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: normal;
 	line-height: 15px;
 	margin: 0;
@@ -305,44 +339,11 @@ img {
 	text-align: center;
 	text-transform: none
 }
-#footer div .connect {
-	float: right;
-	display: inline-block;
-	height: 30px;
-	margin: 0 auto;
-	max-width: none;
-	overflow: hidden;
-	padding: 0;
-	width: auto;
-}
 
-#footer div .connect a {
-	background: url(../images/icons.png) no-repeat;
-	display: block;
-	float: right;
-	height: 30px;
-	margin: 0 15px;
-	padding: 0;
-	text-indent: -99999px;
-	width: 30px;
-}
-#footer div .connect a.github {
-	background-position: 0 0;
-}
-#footer div .connect a.googleplus {
-	background-position: 0 -32px;
-}
-#footer div .connect a.pinterest {
-	background-position: 0 -64px;
-}
-#footer div .connect a.twitter {
-	background-position: 0 -96px;
-}
 
 /* SLIDER CSS START */
 
 .slidecontainer {
-	background-color: violet;
 	margin: 0;
 	max-width: none;
 	width: 100%;
