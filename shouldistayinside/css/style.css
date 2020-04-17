@@ -123,27 +123,18 @@ img {
 
 #body.home div.header div {
 	margin: 0 auto;
-	max-width: 960px;
-	min-height: 140px;
-	padding: 0;
+	max-width: auto;
+	padding: 0 0 20px;
 	position: relative;
+	text-align: center;
 }
 
 
-
-#body.home div.header div h1 {
-	float: central;
-	color: rgb(20, 20, 20);
-	display: block;
-	font-family: lato-bold-webfont;
-	font-size: 40px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0;
-	padding: 47px 0 0;
-	text-align: central;
-	text-transform: none;
-	width: auto;
+#body.home div.header div h2 {
+	color:black;
+  text-align: center;
+  font-family: lato-regular-webfont;
+  font-size: 37px;
 }
 
 
@@ -151,16 +142,27 @@ img {
 	margin: 0;
 	max-width: none;
 	overflow: hidden;
-	padding: 0;
+	padding: 0 50px 70px;
 	width: 100%;
 }
 #body.home div.body div {
 	margin: 0 auto;
-	max-width: 300px;
-	min-height: 120px;
-	padding: 0;
-	float: central;
+	max-width: 960px;
+	min-height: 160px;
+	padding: 0 0 0;
 }
+
+#body.home div.body div h1 {
+	color: #333333;
+	font-size: 120px;
+	text-align: center;
+	font-family: roboto-regular-webfon;
+}
+
+#body.home div.body div h1:hover {
+	color: #003359;
+}
+
 
 /*Text: how many people live in munich*/
 #body.home div.body p{
@@ -221,13 +223,14 @@ img {
 #body.home div.footer {
 	margin: 0;
 	max-width: none;
-	padding: 0 0 350px;
+	padding: 0 0 50px;
 	width: 100%;
 }
 
 #body.home div.footer div{
-	width: 75%;
-	float: right;
+	margin: 0 auto;
+	width: 960px;
+	text-align: center;
 }
 
 #body.home div.footer div p{
@@ -238,11 +241,17 @@ img {
 	font-weight: normal;
 	line-height: 15px;
 	margin: 0;
-	padding: 33px 0 80px;
+	padding: 33px 0 20px;
 	text-align: left;
 	text-transform: uppercase;
 	width: 66.7%;
 }
+
+#body.home div.footer div details{
+	margin: 50px;
+	text-align: left;
+}
+
 
 
 /*----------------------------------------body-styles---------------------------------------*/
@@ -254,6 +263,8 @@ img {
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
 	background-color: #DAD7CB;
+	overflow: hidden;
+	min-height: 150px;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -261,7 +272,7 @@ img {
 #footer div {
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 0px 0 0px; /* 59 0 13 */
+	padding: 59px 0 13px; /* 59 0 13 */
 	width: 85%;
 }
 #footer div a {
@@ -275,7 +286,7 @@ img {
 }
 
 #footer div p {
-	color: #FFFFFF;
+	color: #0065BD;
 	display: block;
 	font-family: roboto-regular-webfont;
 	font-size: 12px;
@@ -323,7 +334,7 @@ img {
 /* SLIDER CSS START */
 
 .slidecontainer {
-	width: 100%; /* Width of the outside container */
+	width: 960px; /* Width of the outside container */
   }
   
   /* The slider itself */

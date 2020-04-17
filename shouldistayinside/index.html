@@ -32,7 +32,7 @@
 						<a href="index.html">🏠</a>
 					</li>
 					<li class="menu">
-						<a href="about.html">❓</a>
+						<a href="#jumpabout">❓</a>
 					</li>
 				</ul>
 			</div>
@@ -41,15 +41,6 @@
 		<div id="body" class="home">
 			<div class="header">
 				<div>
-					<style>
-						#title_header {
-						  color:black;
-						  text-align: center;
-						  font-family: lato-regular-webfont;
-						  font-size: 37px;
-						  }
-					  </style>
-
 					<h2 id = "title_header">How many lives can be saved by social distancing in my city?</h2>
 				</div>
 			</div>
@@ -57,16 +48,7 @@
 			<div class="body">
 				<div>
 					<div>
-						<style>
-							#result_header {
-							  color: #333333;
-							  font-size: 120px;
-							  text-align: center;
-							  font-family: Arial, Helvetica, sans-serif;
-							  }
-						  </style>
-
-						<h1 id="result_header">0</h1>
+						<span title="This is an estimated number of poeple that will survive according to the social distancing that will be pracitced by every citizen. For this we are using the most recent case numbers available. You can find out more about this in our About."><h1 id="result_header">0</h1></span>
 					</div>
 
 					<p>PEOPLE IN MUNICH</p>	
@@ -81,10 +63,19 @@
 
 			<div class="footer">
 				<div>
-					<p>🧑‍🤝‍🧑 Social distancing factor: <span id = "sd_factor"></span></p>
-					<p>🤓 Details für nerds</p>
-					<p>📝 About</p>
+					<p>🧑‍🤝‍🧑 Social distancing factor: <span id = "sd_factor">0</span> %</p>
+					<details>
+						<summary>🤓 Details for nerds</summary>
+						<p>Hier steht der Text, der auf- und zugeklappt werden soll.</p>
+					</details>
+					<a = "jumpabout"></a>
+					<details>
+						<summary>📝 About</summary>
+						<p>Hier steht der Text, der auf- und zugeklappt werden soll.</p>
+					</details>
 				</div>
+			
+
 			</div>
 
 		<div id="footer">
@@ -96,6 +87,7 @@
 				<p>&copy; We got this fam!</p>
 			</div>
 		</div>
+
 	</div>
 </body>
 
