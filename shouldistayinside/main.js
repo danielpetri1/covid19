@@ -92,7 +92,7 @@ function square(num) {
       } else if (nameOfRegion == "Hamburg"){
         recoveryRateInRegion = hamburg
       } else if (nameOfRegion == "Schleswig-Holstein"){
-        recoveryRateInRegion = schleswigBaden-WürttembergHolstein
+        recoveryRateInRegion = schleswigHolstein
       } else if (nameOfRegion == "Saarland"){
         recoveryRateInRegion = saarland
       } else if (nameOfRegion == "Brandenburg"){
