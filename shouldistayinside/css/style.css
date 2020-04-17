@@ -1,4 +1,4 @@
-/* Website template by freewebsitetemplates.com */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -130,29 +130,6 @@ img {
 }
 
 
-/*Das ist eine Art button. Ich will es für später noch drinnen lassen.*/
-/* 
-#body.home div.header div a {
-	background: url(../images/icons.png) no-repeat 0 -128px;
-	color: #FFFFFF;
-	display: block;
-	font-family: quicksand-bold-webfont;
-	font-size: 24px;
-	font-weight: normal;
-	height: 99px;
-	line-height: 24px;
-	margin: 0;
-	padding: 52px 0 0;
-	position: absolute;
-	right: 130px;
-	text-align: center;
-	text-transform: lowercase;
-	top: 437px;
-	width: 156px;
-	z-index: 90;
-}
-*/
-
 
 #body.home div.header div h1 {
 	float: central;
@@ -173,50 +150,51 @@ img {
 #body.home div.body {
 	margin: 0;
 	max-width: none;
+	overflow: hidden;
 	padding: 0;
 	width: 100%;
 }
 #body.home div.body div {
 	margin: 0 auto;
-	max-width: 960px;
-	overflow: hidden;
+	max-width: 500px;
+	min-height: 120px;
 	padding: 0;
+	position: relative;
 }
 
+/*Text: how many people live in munich*/
 #body.home div.body p{
 	color: black;
-	display: block;
+	display: inline-block;
 	font-family: roboto-regular-webfont;
 	font-size: 30px;
 	font-weight: normal;
 	line-height: 15px;
 	margin: 0;
 	padding: 33px 0 50px;
-	text-align: center;
-	float: center;
-	text-transform: none
+	text-transform: none;
+	
 }
 
+
+/*Button for changing the city*/
 #body.home div.body div button{
 	background-color: white;
 	border: 2px solid black;
 	color: black;
-	padding: 15px 32px;
+	display: inline-block;
+	padding: 15px  32px;
 	text-align: center;
 	text-decoration: none;
-	display: block;
 	font-size: 15px;
-	border-radius: 50%;
 	transition-duration: 0.4s;
-	float: right;
+	position: relative;
 }
 
 
 #body.home div.body div button:hover {
 	background-color: #145897; 
 	color: white;
-	/*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
-	border-radius: 50%;
 }
 
 #body.home div.body div div {
@@ -266,25 +244,6 @@ img {
 	width: 66.7%;
 }
 
-
-
-/*Ich weiß nicht wofür das gut ist.*/
-/*
-#body.home div.body div div p a {
-	color: #e0e9e0;
-	display: block;
-	font-family: roboto-regular-webfont;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0;
-	padding: 0;
-	text-decoration: underline;
-}
-#body.home div.body div div p a:hover {
-	color: #11c921;
-}
-*/
 
 /*----------------------------------------body-styles---------------------------------------*/
 
