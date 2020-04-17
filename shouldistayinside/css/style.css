@@ -124,7 +124,7 @@ img {
 #body.home div.header div {
 	margin: 0 auto;
 	max-width: auto;
-	padding: 0 0 20px;
+	padding: 50px 0 20px;
 	position: relative;
 	text-align: center;
 }
@@ -132,9 +132,9 @@ img {
 
 #body.home div.header div h2 {
 	color:black;
-  text-align: center;
-  font-family: lato-regular-webfont;
-  font-size: 37px;
+	text-align: center;
+	font-family: Arial, Sans-Serif, Helvetica;
+	font-size: 37px;
 }
 
 
@@ -142,21 +142,22 @@ img {
 	margin: 0;
 	max-width: none;
 	overflow: hidden;
-	padding: 0 50px 70px;
+	padding: 0 0 70px;
 	width: 100%;
 }
 #body.home div.body div {
-	margin: 0 auto;
 	max-width: 960px;
-	min-height: 160px;
-	padding: 0 0 0;
+	margin: 0 auto;
+	
 }
 
 #body.home div.body div h1 {
 	color: #333333;
+	display: block;
+	float: initial;
 	font-size: 120px;
 	text-align: center;
-	font-family: roboto-regular-webfon;
+	font-family: Arial, Sans-Serif, Helvetica;
 }
 
 #body.home div.body div h1:hover {
@@ -241,14 +242,21 @@ img {
 	font-weight: normal;
 	line-height: 15px;
 	margin: 0;
-	padding: 33px 0 20px;
+	padding: 10px 0 10px;
 	text-align: left;
-	text-transform: uppercase;
-	width: 66.7%;
+	text-transform: none;
 }
 
 #body.home div.footer div details{
 	margin: 50px;
+	text-align: left;
+}
+
+#body.home div.footer div h1{
+	color: black;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 30px;
 	text-align: left;
 }
 
@@ -333,10 +341,33 @@ img {
 
 /* SLIDER CSS START */
 
-.slidecontainer {
-	width: 960px; /* Width of the outside container */
-  }
+#body.home div.slidecontainer {
+	margin: 0;
+	max-width: none;
+	width: 100%;
+}
+
+#body.home div.slidecontainer div{
+	background-color: violet;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+
   
+#body.home div.slidecontainer div p{
+	color: black;
+	display: block;
+	font-family: roboto-regular-webfont;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 15px;
+	margin: 0;
+	padding: 10px 0 10px;
+	text-align: left;
+	text-transform: none;
+}
+
   /* The slider itself */
   .slider {
 	-webkit-appearance: none;  /* Override default CSS styles */
