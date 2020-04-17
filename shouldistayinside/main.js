@@ -7,7 +7,7 @@ var result = document.getElementById("result_header");
 
 slider.oninput = function () {
     sd_factor.innerHTML = this.value;
-    result_header.innerHTML = calcLivesSaved("Musterstadt", "1000", "100000", "0.55", this.value / 100)[0];
+    result_header.innerHTML = calcLivesSaved("Munich", "4563", "1471508", "0.52777", this.value / 100)[0];
 }
 
 // FUNCTION TO DISPLAY OUTPUT
@@ -15,7 +15,9 @@ function square(num) {
     return num * num;
 }
 
-// ------------------- ACTIVATE FOR MAXIMUM
+    //-------------------------- BACKBONE ------------------------------
+
+    // ------------------- ACTIVATE FOR MAXIMUM
     //math.config({
     //number: 'BigNumber',      // Default type of number:
     //                        // 'number' (default), 'BigNumber', or 'Fraction'
@@ -49,18 +51,13 @@ function square(num) {
 
     // Create a math.js context for our simulation. Everything else occurs in the context of the expression parser!
 
-    //-------------- MUSTERINPUT ----------------
-    var nameOfCity = "Musterstadt"
-    var numOfCases = "1000"
-    var numOfPopulation = "100000"
-    var recoveryRateInRegion = "0.55" //TODO: update daily for EVERY region
-
-    //TODO: check recoveryRateInRegion is <= 0.98 otherwise we crash
-
-    var sdvalue = "0.5"
-    //-------------- INPUT FROM USER ----------------
-
     function calcLivesSaved(nameOfCity, numOfCases, numOfPopulation, recoveryRateInRegion, sdvalue){ //OUR MAIN FUNCTION
+
+      if (parseFloat(numOfCases) < 0.0 || parseFloat(numOfPopulation) <= 0.0 
+          || parseFloat(recoveryRateInRegion) < 0.0 || parseFloat(recoveryRateInRegion) > 0.98
+          || parseFloat(sdvalue) < 0 || parseFloat(sdvalue) > 1){
+        throw "Internal error 1: invalid input parameters."
+      }
 
       const sim = math.parser()
       var tfinal = "700" //how long the simulation keeps going... Always input an integer in string representation here!!
@@ -103,8 +100,15 @@ function square(num) {
       const matrix_sd = sim.evaluate("sd_matrix = ndsolve([dsdt_sd, didt_sd, drdt_sd], [s0, i0, r0], dt, tfinal)").toString()
       console.log(sim.evaluate("percentage_sd = sd_matrix.subset(index(" + tfinal + ", 3))").toString())
 
-      //TODO: check that percentage_sd <= percentage0sd (otherwise makes no sense!)
+      //check that percentage_sd <= percentage0sd (otherwise makes no sense!)
+      if (parseFloat(sim.evaluate("percentage_sd").toString()) > parseFloat(sim.evaluate("percentage0sd"))){
+        throw "Internal error 2: invalid percentages in calculation"
+      }
+
+
       const result = sim.evaluate("result = round((percentage0sd - percentage_sd) * 0.02 * " + numOfPopulation + ")").toString()
       const r_eff = sim.evaluate("r_eff = (a_sd / b) * s0").toString()
       return [result, r_eff]
     }
+
+    //-------------------------- BACKBONE ------------------------------
