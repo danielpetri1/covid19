@@ -196,7 +196,8 @@ img {
 	width:auto;
 	display:grid;
     grid-template-columns: max-content max-content;
-    grid-gap:5px;
+	grid-gap:5px;
+	padding-left: 37%;
 	
 }
 
