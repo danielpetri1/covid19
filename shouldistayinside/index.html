@@ -47,17 +47,7 @@
 						<span title="The estimated number of lives saved given the social distancing parameter. For this we are using the most recent case numbers available. You can find out more about this in About."><h1 id="result_header">0</h1></span>
 					</div>
 					<div class = "block">
-						<p>People in
-							<script>
-							var cityName = decodeURIComponent(window.location.search.substring(6));
-							if (cityName === ""){
-								document.write("München");
-							}
-							else{
-								document.write(cityName);
-							}
-							</script>
-						</p>
+						<p>People in</p>
 						<form action="" method="get" accept-charset="UTF-8">
 						<input list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.-()]{0,64}">
 						<datalist id="cities">
@@ -456,14 +446,14 @@
 				<div>
 					<input type="range" min="0" max="100" value="0" id="myRange" class="slider">
 				</div>
+				<details>
+					<summary>🤓 Details for nerds</summary>
+					<p>Hier steht der Text, der auf- und zugeklappt werden soll.</p>
+				</details>
 			</div>
 
 			<div class="footer">
 				<div>
-					<details>
-						<summary>🤓 Details for nerds</summary>
-						<p>Hier steht der Text, der auf- und zugeklappt werden soll.</p>
-					</details>
 					
 					<h1><a name = "jumpabout">📝 About</a></h1>
 					<p>

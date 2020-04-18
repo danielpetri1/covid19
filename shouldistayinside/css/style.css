@@ -147,8 +147,6 @@ img {
 #body.home div.header div {
 	margin: 0 auto;
 	max-width: 1160px;
-	padding: 50px 0 20px;
-	position: relative;
 	text-align: center;
 }
 
@@ -195,7 +193,7 @@ img {
 /*Text: how many people live in munich*/
 
 #body.home div.body div div.block {
-	width:960px;
+	width:auto;
 	display:grid;
     grid-template-columns: max-content max-content;
     grid-gap:5px;
@@ -203,15 +201,12 @@ img {
 }
 
 #body.home div.body div p {
-
 	color: black;
-	display: block;
 	font-family: roboto-regular-webfont;
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: normal;
 	text-align: justify;
-	text-transform: lowercase;
-
+	text-transform: none;
 	display: inline-block;
 	margin: 0 auto;
 }​
@@ -266,14 +261,6 @@ img {
 	text-transform: none;
 }
 
-#body.home div.footer div details{
-	color: black;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	display: block;
-	margin: 50px auto;
-	text-align: left;
-}
 
 #body.home div.footer div h1{
 	color: black;
@@ -345,6 +332,23 @@ img {
 	margin: 0 auto;
 }
 
+/*-----------These are the details for nerds----------------*/
+details{
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	display: block;
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+p{
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-left: 20px;
+}
 
 /*This tells the social distancing percentage.*/
 #body.home div.percent{
@@ -368,7 +372,7 @@ img {
   /* The slider itself */
 .slider {
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 	-webkit-appearance: none;  /* Override default CSS styles */
 	appearance: none;
 	width: 960px; /* Full-width */
@@ -400,10 +404,6 @@ img {
 	height: 25px; /* Slider handle height */
 	background: #0065BD; /* Green background */
 	cursor: pointer; /* Cursor on hover */
-  }
-  
-  p {
-	margin-top: 20px;
   }
   
   /* SLIDER CSS END */
