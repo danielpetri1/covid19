@@ -21,13 +21,21 @@ const otherParam={
   //"Content-Type":"application/json"
 }
 
+var city = "München"
+
+document.getElementById("city_input").onkeypress = function(event){
+  if (event.keyCode == 13 || event.which == 13){
+    city = document.getElementById("city_input").value;
+  }
+};
+
 getDatabase().then(function(db){
 
   //console.log("getDatabase gives " + db)
 
 
   slider.oninput = function () {
-      var city = decodeURIComponent(window.location.search.substring(6));
+      //var city = decodeURIComponent(window.location.search.substring(6));
       console.log("received city: " + city)
       // Default fallback
       if(city === "" ||  !(city == "Stormarn" ||

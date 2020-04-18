@@ -47,9 +47,8 @@
 						<span title="The estimated number of lives saved given the social distancing parameter. For this we are using the most recent case numbers available. You can find out more about this in About."><h1 id="result_header">0</h1></span>
 					</div>
 					<div class = "block">
-						<p>People in</p>
-						<form action="" method="get" accept-charset="UTF-8">
-						<input list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.-()]{0,64}">
+						<p>in</p>
+						<input id="city_input" list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.()-]{0,64}">
 						<datalist id="cities">
 							<option value="Stormarn">
 							<option value="Plön">
@@ -431,7 +430,6 @@
 							<option value="Greiz">
 							<option value="Altenburger Land">
 							</datalist>
-							</form>
 
 						</div>
 
