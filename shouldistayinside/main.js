@@ -26,17 +26,18 @@ var city = "München"
 document.getElementById("city_input").onkeypress = function(event){
   if (event.keyCode == 13 || event.which == 13){
     city = document.getElementById("city_input").value;
+    slider.oninput(); //refreshes numbers
   }
 };
 
 function refreshCity(){
   city = document.getElementById("city_input").value;
-  slider.oninput()
+  slider.oninput() //refreshes numbers
 }
 
 getDatabase().then(function(db){
 
-  //console.log("getDatabase gives " + db)
+  console.log("fresh database loaded successfully");
 
   slider.oninput = function () {
       //var city = decodeURIComponent(window.location.search.substring(6));
