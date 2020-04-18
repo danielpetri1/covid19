@@ -371,9 +371,9 @@ p{
 
 
   /* The slider itself */
-.slider {
+  .slider {
 	display: block;
-	margin: 0 auto 50px;
+	margin: 0 auto;
 	-webkit-appearance: none;  /* Override default CSS styles */
 	appearance: none;
 	width: 960px; /* Full-width */
@@ -396,6 +396,7 @@ p{
 	appearance: none;
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
+	background: #333333; /* Green background */
 	cursor: pointer; /* Cursor on hover */
   }
   
