@@ -370,10 +370,11 @@ p{
 }
 
 
+
   /* The slider itself */
   .slider {
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 	-webkit-appearance: none;  /* Override default CSS styles */
 	appearance: none;
 	width: 960px; /* Full-width */
@@ -396,18 +397,15 @@ p{
 	appearance: none;
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
-	background: #333333; /* Green background */
+	background: #0065BD; /* Green background */
 	cursor: pointer; /* Cursor on hover */
   }
   
 .slider::-moz-range-thumb {
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
-	background: #333333; /* Green background */
+	background: #0065BD; /* Green background */
 	cursor: pointer; /* Cursor on hover */
   }
   
   /* SLIDER CSS END */
-
-
-
