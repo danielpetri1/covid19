@@ -46,13 +46,15 @@
 					<div>
 						<span title="The estimated number of lives saved given the social distancing parameter. For this we are using the most recent case numbers available. You can find out more about this in About."><h1 id="result_header">0</h1></span>
 					</div>
-			
-					<p>People in Munich</p>
+					<div class = "block">
+						<p>People in</p>
+						<input list="cities" name="city" value = "München" pattern="[A-Za-zäöüÄÖÜß]{0,64}">
+					</div>
 
 					<form action="" method="get">
-						<input list="cities" name="city" value = "München" pattern="[A-Za-zäöüÄÖÜß]{0,64}">
-						<datalist id="cities">
-						<option value="Stormarn">
+					
+					<datalist id="cities">
+					<option value="Stormarn">
 					<option value="Plön">
 					<option value="Kiel">
 					<option value="Lübeck">
@@ -456,18 +458,16 @@
 					
 					<h1><a name = "jumpabout">📝 About</a></h1>
 					<p>
-						Germany currently is the 5th hardest-hit country worldwide by cases of COVID-19.
-						As states such as Bavaria enter their fourth week of quarantine, one may start to wonder whether lockdowns are sensible at all. 
-						To avoid such misconceptions and educate the broad public on the impact staying at home can have, 
-						we created a website in which the user can enter their city and modify the percentage of its population spending 
-						their time in isolation, obtaining the number of lives saved as a result. A social distancing factor of 0% corresponds 
-						to the worst-case scenario where people go on their days as usual, visiting restaurants, concerts, parties, and other social 
-						gatherings. As the slider is moved to the right, the difference in fatal COVID-19 cases is shown to the user as the number of lives spared.
-						<br/><br />
-						We believe that combining a very intuitive to use website with an approach favoring positive reinforcement has a much greater potential 
-						to change a societies’ behavior than its draconian counterpart: using fear, panic, and death counts to coerce people into confinement. 
-						If interested, the user can access an explanatory page detailing our mathematical ansatz or ways one can integrate social distancing in their 
-						lives in a healthy manner.
+						Germany currently is the 5th hardest-hit country worldwide by cases of COVID-19. As states such as Bavaria enter their fourth week of quarantine, 
+						one may start to wonder whether lockdowns are sensible at all. To avoid such misconceptions and educate the broad public on the impact staying at 
+						home can have, we created a website in which the user can enter their city and modify a social distancing factor to obtain the number of lives saved.
+						<br/><br/>
+						A social distancing factor of 0% corresponds to the worst-case scenario where people go on their days as usual, visiting restaurants, concerts, parties,
+						 and other social gatherings. Conversely, a factor of 100% recreates the conditions observed in countries that have undertaken harsh lockdown measures 
+						 (e.g. China). As the slider is moved to the right, the difference in fatal COVID-19 cases is shown to the user as the number of lives spared.
+						<br/><br/>
+						We believe that combining a very intuitive to use website with an approach favoring positive reinforcement has a much greater potential to change a 
+						societies’ behavior than its draconian counterpart: using fear, panic, and death counts to coerce people into confinement. 
 					</p>
 					
 				</div>
