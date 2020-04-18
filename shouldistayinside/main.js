@@ -525,11 +525,11 @@ getDatabase().then(function(db){
         cases += item.cases;
         //console.log(item.population)
         population += item.population;
-        
+        /*
         if (item.bundesland_name != region){
           throw "Internal error 3: Inconsistent dataset detected, " + item.bundesland_name + ", " + region
         }
-        
+        */
       }
 
       //console.log(name)
