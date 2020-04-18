@@ -430,8 +430,23 @@ getDatabase().then(function(db){
       console.log(dbInfo[1])
       console.log(dbInfo[2])
       console.log(dbInfo[3])
+      console.log(dbInfo[4])
       
-      result_header.innerHTML = calcLivesSaved(dbInfo[0], dbInfo[1].toString(), dbInfo[2].toString(), dbInfo[3], this.value / 100)[0];
+      var calcResult = calcLivesSaved(dbInfo[0], dbInfo[1].toString(), dbInfo[2].toString(), dbInfo[3], this.value / 100);
+      result_header.innerHTML = calcResult[0];
+
+
+      document.getElementById("R_eff").innerHTML = "R_eff = " + calcResult[1];
+      document.getElementById("casesnerd").innerHTML = "Cases: " + calcResult[2] + " (considering city and Landkreis!)";
+      document.getElementById("popnerd").innerHTML = "Population: " + calcResult[3] + " (considering city and Landkreis!)";
+      document.getElementById("contact_chosen").innerHTML = "Contact rate (your chosen value): " + calcResult[6];
+      document.getElementById("contact_max").innerHTML = "Contact rate (0% social distancing): " + calcResult[4];
+      document.getElementById("contact_min").innerHTML = "Contact rate (100% social distancing): " + calcResult[5];
+      document.getElementById("percentage0sd_nerd").innerHTML = "Percentage infected in chosen city with 0% social distancing after end of pandemic: " + calcResult[7]; 
+      document.getElementById("percentagesd_nerd").innerHTML = "Percentage infected in chosen city with " + this.value + "% social distancing after end of pandemic: " + calcResult[8]
+      document.getElementById("dataset_update").innerHTML = "Data used from Fusionbase updated on: " + dbInfo[4];
+      //7 8
+
   }
   //-------------------------- BACKBONE ------------------------------
       //var request = new XMLHttpRequest()
@@ -537,7 +552,8 @@ getDatabase().then(function(db){
       //console.log(population)
       //console.log(region)
 
-      return [name, cases, population, region]
+
+      return [name, cases, population, region, results[0].publication_datetime]
     }
 
 
@@ -727,7 +743,8 @@ getDatabase().then(function(db){
 
         const result = sim.evaluate("result = round((percentage0sd - percentage_sd) * 0.02 * " + numOfPopulation + ")").toString()
         const r_eff = sim.evaluate("r_eff = (a_sd / b) * s0").toString()
-        return [result, r_eff]
+        return [result, r_eff, numOfCases, numOfPopulation, sim.evaluate("a").toString(), sim.evaluate("a_min").toString(), sim.evaluate("a_sd").toString(),
+                sim.evaluate("percentage0sd").toString(), sim.evaluate("percentage_sd").toString()]
       }
 
       //-------------------------- BACKBONE ------------------------------
