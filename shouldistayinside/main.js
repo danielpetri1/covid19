@@ -418,7 +418,7 @@ getDatabase().then(function(db){
       city == "Greiz" ||
       city == "Altenburger Land")){
         city = "München";
-        location.reload();
+        window.location.reload(true);
       }
 
       //console.log(city);
