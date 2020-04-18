@@ -41,7 +41,7 @@ getDatabase().then(function(db){
 
   slider.oninput = function () {
       //var city = decodeURIComponent(window.location.search.substring(6));
-      console.log("received city: " + city)
+      //console.log("received city: " + city)
       // Default fallback
       if(city === "" ||  !(city == "Stormarn" ||
       city == "Plön" ||
@@ -431,11 +431,11 @@ getDatabase().then(function(db){
       sd_factor.innerHTML = this.value;
       var dbInfo = getData(city, db);
 
-      console.log(dbInfo[0])
-      console.log(dbInfo[1])
-      console.log(dbInfo[2])
-      console.log(dbInfo[3])
-      console.log(dbInfo[4])
+      //console.log(dbInfo[0])
+      //console.log(dbInfo[1])
+      //console.log(dbInfo[2])
+      //console.log(dbInfo[3])
+      //console.log(dbInfo[4])
       
       var calcResult = calcLivesSaved(dbInfo[0], dbInfo[1].toString(), dbInfo[2].toString(), dbInfo[3], this.value / 100);
       result_header.innerHTML = calcResult[0];
@@ -454,74 +454,10 @@ getDatabase().then(function(db){
 
   }
   //-------------------------- BACKBONE ------------------------------
-      //var request = new XMLHttpRequest()
-      
-      //var fusionbase = "https://cors-anywhere.herokuapp.com/https://api.public.fusionbase.io/cases/filter?kreis_name=München"
-      //var fusionbase = "https://api.public.fusionbase.io/cases/latest"
-      
-      /*
-      function httpGet(url){
-      var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open("GET", url, false);
-      xmlHttp.setRequestHeader("X-API-Key","58f3bf99-3ecc-4c89-a31e-7fa332b19f77");
-      xmlHttp.send(null);
-      return xmlHttp.responseText;
-    }
-
-    console.log(httpGet(fusionbase))
-    */
-
-    /*
-    $.ajax({
-      url: 'https://api.public.fusionbase.io/cases/latest',
-      headers: {
-          'X-API-Key':'58f3bf99-3ecc-4c89-a31e-7fa332b19f77',
-          //'Content-Type':'application/json'
-      },
-      method: 'GET',
-      dataType: 'json',
-      data: {},
-      success: function(data){
-        console.log('succes: '+data);
-      }
-    });
-    */
-
-    
-
-    /*
-    fetch(fusionbase,otherParam)
-    .then(data=>{console.log(data.json())})
-    .then(res=>{console.log(res)})
-    .catch(error=>console.log(error))
-    */
-
-    
-    //WORKS WITH CORS-ANYWHERE
-    //https://medium.com/netscape/hacking-it-out-when-cors-wont-let-you-be-great-35f6206cc646
-    /*
-    var requestedCity = "München"
-
-    let xhr = new XMLHttpRequest()
-    xhr.open("GET", fusionbase)
-    xhr.setRequestHeader("X-API-Key", "58f3bf99-3ecc-4c89-a31e-7fa332b19f77")
-    xhr.send()
-    let db;
-    */
-
-  /*
-  async function getDatabase(){
-      const response = await fetch(fusionbase,otherParam);
-      const data = await response.json();
-      return data;
-    }
-  */
-
-    
 
     function getData(name, db) {
       var data = db;
-      console.log(data)
+      //console.log(data)
       var results = []
 
       for (item of data) {
@@ -534,7 +470,7 @@ getDatabase().then(function(db){
         throw "City does not exist"
       }
       //console.log(data)
-      console.log(results)
+      //console.log(results)
 
       var cases = 0;
       var population = 0;
@@ -561,46 +497,6 @@ getDatabase().then(function(db){
       return [name, cases, population, region, results[0].publication_datetime]
     }
 
-
-    /*
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-          return JSON.parse(xhr.responseText);
-      }
-  };
-    */
-  /*
-    xhr.onload = function () {
-      if (xhr.readyState === 4) {
-          var a = JSON.parse(xhr.responseText);
-          console.log(a)
-          a.filter(it => it.location_label.includes('Stadt'))
-          console.log(a)
-          for (i = 0; i < a.size; i++){
-            console.log(a[0])
-          }
-          document.write(a[0].toString())
-      }
-  };
-
-  xhr.onload()
-  */
-
-    /*
-    xhr.onload = function() {
-    let responseObj = xhr.response;
-    alert(responseObj.message); // Hello, world!
-    };
-    */
-
-      // --------------------- CONNECTING TO FUSIONBASE -------------------
-
-
-
-
-
-      // --------------------- CONNECTING TO FUSIONBASE -------------------
-
       // ---------- RECOVERY RATES (Genesen / Covid19Faelle) --------------
       var bayern = "0.53293" 
       var nordrheinWestfalen = "0.69922"
@@ -620,12 +516,6 @@ getDatabase().then(function(db){
       var bremen = "0.72"
       // ---------- RECOVERY RATES --------------
       
-      // ------------------- ACTIVATE FOR MAXIMUM PRECISION ---------------
-      //math.config({
-      //number: 'BigNumber',      // Default type of number:
-      //                        // 'number' (default), 'BigNumber', or 'Fraction'
-      //precision: 64             // Number of significant digits for BigNumbers
-      //})
 
       function ndsolve(f, x0, dt, tmax) { //code for ndsolve from https://mathjs.org/examples/browser/rocket_trajectory_optimization.html.html
         const n = f.size()[0]  // Number of variables
@@ -702,43 +592,43 @@ getDatabase().then(function(db){
         const sim = math.parser()
         var tfinal = "700" //how long the simulation keeps going... Always input an integer in string representation here!!
 
-        console.log(sim.evaluate("estimatedRecovered = " + recoveryRateInRegion + " * " + numOfCases).toString()) //TODO: remove console.log / toString wrapper
-        console.log(sim.evaluate("estimatedDead = 0.02 * " + numOfCases).toString())
+        sim.evaluate("estimatedRecovered = " + recoveryRateInRegion + " * " + numOfCases)
+        sim.evaluate("estimatedDead = 0.02 * " + numOfCases)
 
-        console.log(sim.evaluate("estimatedRemoved = estimatedRecovered + estimatedDead").toString())
-        console.log(sim.evaluate("infectedPercentage = 1 - 0.02 - " + recoveryRateInRegion).toString())
-        console.log(sim.evaluate("estimatedInfected = infectedPercentage * " + numOfCases).toString())
+        sim.evaluate("estimatedRemoved = estimatedRecovered + estimatedDead")
+        sim.evaluate("infectedPercentage = 1 - 0.02 - " + recoveryRateInRegion)
+        sim.evaluate("estimatedInfected = infectedPercentage * " + numOfCases)
 
-        console.log(sim.evaluate("i0 = estimatedInfected / " + numOfPopulation).toString())
-        console.log(sim.evaluate("r0 = estimatedRemoved / " + numOfPopulation).toString())
-        console.log(sim.evaluate("s0 = 1 - i0 - r0").toString())
+        sim.evaluate("i0 = estimatedInfected / " + numOfPopulation)
+        sim.evaluate("r0 = estimatedRemoved / " + numOfPopulation)
+        sim.evaluate("s0 = 1 - i0 - r0")
 
         sim.evaluate("dt = 1.0")   // Simulation timestep
         sim.evaluate("tfinal = " + tfinal + ".0") // Simulation duration
 
         //Calculate deaths in 0% social distancing case
         sim.evaluate("b = 0.0714286") //approx. 1/14
-        console.log(sim.evaluate("a = 2.7 * b  / s0").toString()) //Always input the number as string here so Math.js can handle it with its own representation of the numbers!
+        sim.evaluate("a = 2.7 * b  / s0") //Always input the number as string here so Math.js can handle it with its own representation of the numbers!
         sim.evaluate("dsdt(s,i,r) = - a * s * i")
         sim.evaluate("didt(s,i,r) = a * s * i - (b * i)")
         sim.evaluate("drdt(s,i,r) = b * i")
 
         const matrix0sd = sim.evaluate("resultmatrix = ndsolve([dsdt, didt, drdt], [s0, i0, r0], dt, tfinal)").toString()
-        console.log(sim.evaluate("percentage0sd = resultmatrix.subset(index(" + tfinal + ", 3))").toString())
+        sim.evaluate("percentage0sd = resultmatrix.subset(index(" + tfinal + ", 3))").toString()
 
 
         //Calculate contact rate for 100% social distancing value (needed for interpolation)
-        console.log(sim.evaluate("a_min = 0.3 * b / s0").toString())
+        sim.evaluate("a_min = 0.3 * b / s0").toString()
 
         //Find the contact rate corresponding to the given sd value
-        console.log(sim.evaluate("a_sd = (a_min - a) * " + sdvalue + " + a").toString())
+        sim.evaluate("a_sd = (a_min - a) * " + sdvalue + " + a").toString()
 
         sim.evaluate("dsdt_sd(s,i,r) = - a_sd * s * i")
         sim.evaluate("didt_sd(s,i,r) = a_sd * s * i - (b * i)")
         sim.evaluate("drdt_sd(s,i,r) = b * i")
 
         const matrix_sd = sim.evaluate("sd_matrix = ndsolve([dsdt_sd, didt_sd, drdt_sd], [s0, i0, r0], dt, tfinal)").toString()
-        console.log(sim.evaluate("percentage_sd = sd_matrix.subset(index(" + tfinal + ", 3))").toString())
+        sim.evaluate("percentage_sd = sd_matrix.subset(index(" + tfinal + ", 3))").toString()
 
         //check that percentage_sd <= percentage0sd (otherwise makes no sense!)
         if (parseFloat(sim.evaluate("percentage_sd").toString()) > parseFloat(sim.evaluate("percentage0sd"))){
