@@ -417,7 +417,8 @@ getDatabase().then(function(db){
       city == "Ilm-Kreis" ||
       city == "Greiz" ||
       city == "Altenburger Land")){
-        city = "München"
+        city = "München";
+        location.reload();
       }
 
       //console.log(city);
