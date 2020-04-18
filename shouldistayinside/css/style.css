@@ -107,8 +107,8 @@ img {
 
 #header div .connect {
 	float: right;
-	display: block;
 	height: 30px;
+	padding-top: 12px;
 	width: auto;
 }
 
@@ -116,7 +116,7 @@ img {
 	background: url(../images/icons.png) no-repeat;
 	display: block;
 	height: 50px;
-	padding-top: 10px;
+	padding-right: 10px;
 	text-indent: -99999px;
 	width: 50px;
 }
@@ -168,6 +168,8 @@ img {
 	padding: 0 0 35px;
 	width: 100%;
 }
+
+/*---------------------------------------------------*/
 #body.home div.body div {
 	max-width: 960px;
 	margin: 0 auto;
@@ -191,9 +193,12 @@ img {
 
 
 /*Text: how many people live in munich*/
-#body.home div.body p{
+#body.home div.body div div.boxandtext{
+	background-color: red;
+}
+
+#body.home div.body div div p{
 	color: black;
-	display: block;
 	font-family: roboto-regular-webfont;
 	font-size: 25px;
 	font-weight: normal;
@@ -201,9 +206,19 @@ img {
 	margin: 0;
 	padding: 33px 0 50px;
 	text-transform: lowercase;
+	display: inline-block;
 	text-align: center;
 }
 
+
+/*-----------TextBox--------------*/
+#body.home div.body div div input{
+	display: inline-block;
+	margin: 0 auto;
+}
+
+
+/*---------------------------------------------------*/
 
 
 #body.home div.body div div {
@@ -214,18 +229,7 @@ img {
 }
 
 
-#body.home div.body div div p{
-	color: #0065BD;
-	display: block;
-	font-family: roboto-regular-webfont;
-	font-size: 200px;
-	font-weight: normal;
-	line-height: 15px;
-	margin: 0;
-	padding: 85px 0 100px;
-	text-align: center;
-	text-transform: none
-}
+
 
 #body.home div.footer {
 	margin: 0;
