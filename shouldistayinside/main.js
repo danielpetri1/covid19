@@ -29,6 +29,10 @@ document.getElementById("city_input").onkeypress = function(event){
   }
 };
 
+function refreshCity(){
+  city = document.getElementById("city_input").value;
+}
+
 getDatabase().then(function(db){
 
   //console.log("getDatabase gives " + db)
