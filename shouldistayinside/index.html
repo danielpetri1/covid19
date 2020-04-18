@@ -50,9 +50,8 @@
 					<div class = "block">
 						<p>in</p>
 						<input id="city_input" list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.()-]{0,64}" value="München">
-						<button type="button" onclick="refreshCity()" class="btn btn-default btn-sm" style= "background: url(reload.png)">Reload
-						</button>
-
+						<button id="close-image" type="button" onclick="refreshCity()" ><img src="images/reload.png"></button>
+						
 						<datalist id="cities">
 							<option value="Stormarn">
 							<option value="Plön">
