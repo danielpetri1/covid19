@@ -235,8 +235,8 @@ img {
 #close-image img {
 	display: block;
 	float: center;
-    height: 33px;  
-	width: 33px;
+    height: 35px;  
+	width: 35px;
 }
 
 
@@ -270,9 +270,9 @@ img {
 	color: black;
 	display: block;
 	font-family: roboto-regular-webfont;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: normal;
-	line-height: 15px;
+	line-height: 150%;
 	margin: 0 20px;
 	padding: 10px 0 10px;
 	text-align: justify;
@@ -392,7 +392,7 @@ p{
   /* The slider itself */
   .slider {
 	display: block;
-	margin: 0 auto 50px;
+	margin: 0 auto 25px;
 	-webkit-appearance: none;  /* Override default CSS styles */
 	appearance: none;
 	width: 960px; /* Full-width */
