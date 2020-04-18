@@ -23,12 +23,12 @@ const otherParam={
 
 getDatabase().then(function(db){
 
-  console.log("getDatabase gives " + db)
+  //console.log("getDatabase gives " + db)
 
 
   slider.oninput = function () {
       var city = window.location.search.substring(6);
-
+      console.log("received city: " + city)
       // Default fallback
       if(city === "" ||  !(city == "Stormarn" ||
       city == "Plön" ||
