@@ -1,19 +1,6 @@
 <!doctype html>
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9948073-6"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-	
-		gtag('config', 'UA-9948073-6');
-	</script>
-	
-	<!-- Google Analytics End -->
-
-	
 	<link rel="icon" 
       type="image/png" 
 	  href="images/virus.png">
@@ -57,16 +44,13 @@
 			<div class="body">
 				<div>
 					<div>
-						<span title="This the estimated number of lives saved given the social distancing parameter. For this we are using the most recent case numbers available. You can find out more about this in About."><h1 id="result_header">0</h1></span>
+						<span title="The estimated number of lives saved given the social distancing parameter. For this we are using the most recent case numbers available. You can find out more about this in About."><h1 id="result_header">0</h1></span>
 					</div>
-
-					
+			
 					<p>People in Munich</p>
 
-
-
 					<form action="index.html" method="get">
-						<input list="cities" name="city" value = "München">
+						<input list="cities" name="city" value = "München" pattern="[A-Za-zäöüÄÖÜß]{0,64}">
 						<datalist id="cities">
 						<option value="Stormarn">
 					<option value="Plön">
