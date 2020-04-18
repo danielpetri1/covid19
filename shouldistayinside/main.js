@@ -444,7 +444,7 @@ getDatabase().then(function(db){
       document.getElementById("R_eff").innerHTML = "R_eff = " + calcResult[1];
       document.getElementById("casesnerd").innerHTML = "Cases: " + calcResult[2] + " (considering city and Landkreis!)";
       document.getElementById("popnerd").innerHTML = "Population: " + calcResult[3] + " (considering city and Landkreis!)";
-      document.getElementById("contact_chosen").innerHTML = "Contact rate (your chosen value): " + calcResult[6];
+      document.getElementById("contact_chosen").innerHTML = "Contact rate (" + this.value +"% social distancing): " + calcResult[6];
       document.getElementById("contact_max").innerHTML = "Contact rate (0% social distancing): " + calcResult[4];
       document.getElementById("contact_min").innerHTML = "Contact rate (100% social distancing): " + calcResult[5];
       document.getElementById("percentage0sd_nerd").innerHTML = "Percentage infected in chosen city with 0% social distancing after end of pandemic: " + calcResult[7]; 
