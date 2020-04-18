@@ -49,7 +49,7 @@
 					<div class = "block">
 						<p>People in
 							<script>
-							var cityName = window.location.search.substring(6);
+							var cityName = decodeURIComponent(window.location.search.substring(6));
 							if (cityName === ""){
 								document.write("München");
 							}

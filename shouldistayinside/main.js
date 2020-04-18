@@ -27,7 +27,7 @@ getDatabase().then(function(db){
 
 
   slider.oninput = function () {
-      var city = window.location.search.substring(6);
+      var city = decodeURIComponent(window.location.search.substring(6));
       console.log("received city: " + city)
       // Default fallback
       if(city === "" ||  !(city == "Stormarn" ||
