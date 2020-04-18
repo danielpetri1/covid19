@@ -31,12 +31,12 @@ document.getElementById("city_input").onkeypress = function(event){
 
 function refreshCity(){
   city = document.getElementById("city_input").value;
+  slider.oninput()
 }
 
 getDatabase().then(function(db){
 
   //console.log("getDatabase gives " + db)
-
 
   slider.oninput = function () {
       //var city = decodeURIComponent(window.location.search.substring(6));
