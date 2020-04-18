@@ -83,7 +83,7 @@ img {
 	width: auto;
 }
 #header div ul li a {
-	color: #0065BD;
+	color: #ffffff;
 	font-family: lato-regular-webfont;
 	font-size: 20px;
 	font-weight: normal;
@@ -178,17 +178,12 @@ img {
 	color: #333333;
 	display: block;
 	margin: 0 auto;
-	padding-bottom: 40px;
+	padding-bottom: 25px;
 	float: initial;
 	font-size: 200px;
 	text-align: center;
 	font-family: Arial, Sans-Serif, Helvetica;
 }
-
-#body.home div.body div h1:hover {
-	color: #003359;
-}
-
 
 /*Text: how many people live in munich*/
 
@@ -396,14 +391,14 @@ p{
 	appearance: none;
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
-	background: #0065BD; /* Green background */
+	background: #DAD7CB; /* Green background */
 	cursor: pointer; /* Cursor on hover */
   }
   
 .slider::-moz-range-thumb {
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
-	background: #0065BD; /* Green background */
+	background: #DAD7CB; /* Green background */
 	cursor: pointer; /* Cursor on hover */
   }
   
