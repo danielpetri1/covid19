@@ -193,28 +193,37 @@ img {
 
 
 /*Text: how many people live in munich*/
-#body.home div.body div div.boxandtext{
-	background-color: red;
+
+#body.home div.body div div.block {
+	width:960px;
+	display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap:5px;
+	
 }
 
-#body.home div.body div div p{
+#body.home div.body div p {
+
 	color: black;
+	display: block;
 	font-family: roboto-regular-webfont;
-	font-size: 25px;
+	font-size: 30px;
 	font-weight: normal;
-	line-height: 10px;
-	margin: 0;
-	padding: 33px 0 50px;
+	text-align: justify;
 	text-transform: lowercase;
-	display: inline-block;
-	text-align: center;
-}
 
-
-/*-----------TextBox--------------*/
-#body.home div.body div div input{
 	display: inline-block;
 	margin: 0 auto;
+}​
+
+#body.home div.body div p:after{
+	content: ":";
+}
+
+/*-----------TextBox--------------*/
+#body.home div.body div input{
+	font-size: 20px;
+	display: block;
 }
 
 
