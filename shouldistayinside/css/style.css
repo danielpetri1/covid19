@@ -391,7 +391,6 @@ p{
 	appearance: none;
 	width: 25px; /* Set a specific slider handle width */
 	height: 25px; /* Slider handle height */
-	background: #DAD7CB; /* Green background */
 	cursor: pointer; /* Cursor on hover */
   }
   
