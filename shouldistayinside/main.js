@@ -6,15 +6,396 @@ var result = document.getElementById("result_header");
 //result_header.innerHTML = sd_factor.innerHTML;
 
 slider.oninput = function () {
+    var city = window.location.search.substring(6);
+
+    // Default fallback
+    if(city === "" ||  !(city == "Stormarn" ||
+    city == "Plön" ||
+    city == "Kiel" ||
+    city == "Lübeck" ||
+    city == "Segeberg" ||
+    city == "Steinburg" ||
+    city == "Ostholstein" ||
+    city == "Schleswig-Flensburg" ||
+    city == "Rendsburg-Eckernförde" ||
+    city == "Pinneberg" ||
+    city == "Nordfriesland" ||
+    city == "Flensburg" ||
+    city == "Dithmarschen" ||
+    city == "Herzogtum Lauenburg" ||
+    city == "Neumünster" ||
+    city == "Hamburg" ||
+    city == "Leer" ||
+    city == "Goslar" ||
+    city == "Stade" ||
+    city == "Ammerland" ||
+    city == "Wittmund" ||
+    city == "Hildesheim" ||
+    city == "Friesland" ||
+    city == "Holzminden" ||
+    city == "Delmenhorst" ||
+    city == "Wolfsburg" ||
+    city == "Schaumburg" ||
+    city == "Göttingen" ||
+    city == "Wesermarsch" ||
+    city == "Osterholz" ||
+    city == "Diepholz" ||
+    city == "Helmstedt" ||
+    city == "Northeim" ||
+    city == "Vechta" ||
+    city == "Emden" ||
+    city == "Rotenburg (Wümme)" ||
+    city == "Celle" ||
+    city == "Region Hannover" ||
+    city == "Grafschaft Bentheim" ||
+    city == "Osnabrück" ||
+    city == "Cuxhaven" ||
+    city == "Uelzen" ||
+    city == "Lüchow-Dannenberg" ||
+    city == "Gifhorn" ||
+    city == "Oldenburg (Oldb)" ||
+    city == "Wolfenbüttel" ||
+    city == "Hameln-Pyrmont" ||
+    city == "Heidekreis" ||
+    city == "Aurich" ||
+    city == "Nienburg (Weser)" ||
+    city == "Peine" ||
+    city == "Oldenburg" ||
+    city == "Lüneburg" ||
+    city == "Verden" ||
+    city == "Braunschweig" ||
+    city == "Wilhelmshaven" ||
+    city == "Emsland" ||
+    city == "Harburg" ||
+    city == "Salzgitter" ||
+    city == "Cloppenburg" ||
+    city == "Bremerhaven" ||
+    city == "Bremen" ||
+    city == "Dortmund" ||
+    city == "Bottrop" ||
+    city == "Mülheim an der Ruhr" ||
+    city == "Hochsauerlandkreis" ||
+    city == "Bonn" ||
+    city == "Münster" ||
+    city == "Steinfurt" ||
+    city == "Recklinghausen" ||
+    city == "Remscheid" ||
+    city == "Paderborn" ||
+    city == "Mettmann" ||
+    city == "Hamm" ||
+    city == "Gütersloh" ||
+    city == "Solingen" ||
+    city == "Rheinisch-Bergischer Kreis" ||
+    city == "Wuppertal" ||
+    city == "Rhein-Sieg-Kreis" ||
+    city == "Städteregion Aachen" ||
+    city == "Borken" ||
+    city == "Rhein-Kreis Neuss" ||
+    city == "Wesel" ||
+    city == "Soest" ||
+    city == "Rhein-Erft-Kreis" ||
+    city == "Olpe" ||
+    city == "Viersen" ||
+    city == "Krefeld" ||
+    city == "Essen" ||
+    city == "Herne" ||
+    city == "Coesfeld" ||
+    city == "Oberbergischer Kreis" ||
+    city == "Düsseldorf" ||
+    city == "Kleve" ||
+    city == "Bochum" ||
+    city == "Köln" ||
+    city == "Gelsenkirchen" ||
+    city == "Leverkusen" ||
+    city == "Heinsberg" ||
+    city == "Warendorf" ||
+    city == "Oberhausen" ||
+    city == "Bielefeld" ||
+    city == "Hagen" ||
+    city == "Minden-Lübbecke" ||
+    city == "Höxter" ||
+    city == "Euskirchen" ||
+    city == "Düren" ||
+    city == "Unna" ||
+    city == "Ennepe-Ruhr-Kreis" ||
+    city == "Mönchengladbach" ||
+    city == "Lippe" ||
+    city == "Märkischer Kreis" ||
+    city == "Siegen-Wittgenstein" ||
+    city == "Herford" ||
+    city == "Duisburg" ||
+    city == "Darmstadt" ||
+    city == "Fulda" ||
+    city == "Limburg-Weilburg" ||
+    city == "Gießen" ||
+    city == "Vogelsbergkreis" ||
+    city == "Wetteraukreis" ||
+    city == "Kassel" ||
+    city == "Rheingau-Taunus-Kreis" ||
+    city == "Waldeck-Frankenberg" ||
+    city == "Odenwaldkreis" ||
+    city == "Hersfeld-Rotenburg" ||
+    city == "Groß-Gerau" ||
+    city == "Frankfurt am Main" ||
+    city == "Marburg-Biedenkopf" ||
+    city == "Main-Kinzig-Kreis" ||
+    city == "Werra-Meißner-Kreis" ||
+    city == "Bergstraße" ||
+    city == "Schwalm-Eder-Kreis" ||
+    city == "Hochtaunuskreis" ||
+    city == "Wiesbaden" ||
+    city == "Lahn-Dill-Kreis" ||
+    city == "Main-Taunus-Kreis" ||
+    city == "Darmstadt-Dieburg" ||
+    city == "Offenbach" ||
+    city == "Offenbach am Main" ||
+    city == "Bernkastel-Wittlich" ||
+    city == "Landau in der Pfalz" ||
+    city == "Westerwaldkreis" ||
+    city == "Vulkaneifel" ||
+    city == "Birkenfeld" ||
+    city == "Trier-Saarburg" ||
+    city == "Südwestpfalz" ||
+    city == "Alzey-Worms" ||
+    city == "Pirmasens" ||
+    city == "Frankenthal (Pfalz)" ||
+    city == "Mayen-Koblenz" ||
+    city == "Speyer" ||
+    city == "Altenkirchen (Westerwald)" ||
+    city == "Kaiserslautern" ||
+    city == "Donnersbergkreis" ||
+    city == "Zweibrücken" ||
+    city == "Worms" ||
+    city == "Eifelkreis Bitburg-Prüm" ||
+    city == "Koblenz" ||
+    city == "Bad Kreuznach" ||
+    city == "Mainz" ||
+    city == "Bad Dürkheim" ||
+    city == "Cochem-Zell" ||
+    city == "Trier" ||
+    city == "Neuwied" ||
+    city == "Rhein-Hunsrück-Kreis" ||
+    city == "Ludwigshafen am Rhein" ||
+    city == "Germersheim" ||
+    city == "Kusel" ||
+    city == "Rhein-Pfalz-Kreis" ||
+    city == "Südliche Weinstraße" ||
+    city == "Rhein-Lahn-Kreis" ||
+    city == "Mainz-Bingen" ||
+    city == "Ahrweiler" ||
+    city == "Neustadt an der Weinstraße" ||
+    city == "Esslingen" ||
+    city == "Rottweil" ||
+    city == "Neckar-Odenwald-Kreis" ||
+    city == "Ravensburg" ||
+    city == "Heilbronn" ||
+    city == "Tübingen" ||
+    city == "Ludwigsburg" ||
+    city == "Breisgau-Hochschwarzwald" ||
+    city == "Göppingen" ||
+    city == "Rhein-Neckar-Kreis" ||
+    city == "Tuttlingen" ||
+    city == "Biberach" ||
+    city == "Waldshut" ||
+    city == "Mannheim" ||
+    city == "Rastatt" ||
+    city == "Zollernalbkreis" ||
+    city == "Schwäbisch Hall" ||
+    city == "Böblingen" ||
+    city == "Konstanz" ||
+    city == "Karlsruhe" ||
+    city == "Ulm" ||
+    city == "Hohenlohekreis" ||
+    city == "Lörrach" ||
+    city == "Rems-Murr-Kreis" ||
+    city == "Schwarzwald-Baar-Kreis" ||
+    city == "Emmendingen" ||
+    city == "Sigmaringen" ||
+    city == "Bodenseekreis" ||
+    city == "Freudenstadt" ||
+    city == "Heidenheim" ||
+    city == "Ostalbkreis" ||
+    city == "Alb-Donau-Kreis" ||
+    city == "Freiburg im Breisgau" ||
+    city == "Main-Tauber-Kreis" ||
+    city == "Pforzheim" ||
+    city == "Calw" ||
+    city == "Stuttgart" ||
+    city == "Enzkreis" ||
+    city == "Reutlingen" ||
+    city == "Ortenaukreis" ||
+    city == "Heidelberg" ||
+    city == "Baden-Baden" ||
+    city == "Freyung-Grafenau" ||
+    city == "Kelheim" ||
+    city == "Augsburg" ||
+    city == "Erding" ||
+    city == "Coburg" ||
+    city == "Starnberg" ||
+    city == "Lichtenfels" ||
+    city == "Dachau" ||
+    city == "Neustadt a.d. Waldnaab" ||
+    city == "Bayreuth" ||
+    city == "Bamberg" ||
+    city == "Dillingen a.d. Donau" ||
+    city == "Miesbach" ||
+    city == "Weißenburg-Gunzenhausen" ||
+    city == "Altötting" ||
+    city == "Straubing" ||
+    city == "Schwandorf" ||
+    city == "Rhön-Grabfeld" ||
+    city == "Landshut" ||
+    city == "Donau-Ries" ||
+    city == "Unterallgäu" ||
+    city == "Nürnberg" ||
+    city == "Lindau (Bodensee)" ||
+    city == "Memmingen" ||
+    city == "Neustadt a.d. Aisch-Bad Windsheim" ||
+    city == "Kaufbeuren" ||
+    city == "Ingolstadt" ||
+    city == "Aschaffenburg" ||
+    city == "Cham" ||
+    city == "Neu-Ulm" ||
+    city == "Garmisch-Partenkirchen" ||
+    city == "Kempten (Allgäu)" ||
+    city == "Eichstätt" ||
+    city == "Rottal-Inn" ||
+    city == "Schweinfurt" ||
+    city == "Aichach-Friedberg" ||
+    city == "Straubing-Bogen" ||
+    city == "Forchheim" ||
+    city == "Würzburg" ||
+    city == "Traunstein" ||
+    city == "Bad Tölz-Wolfratshausen" ||
+    city == "Weiden i.d. OPf." ||
+    city == "Erlangen-Höchstadt" ||
+    city == "Haßberge" ||
+    city == "Neumarkt i.d. OPf." ||
+    city == "Rosenheim" ||
+    city == "Erlangen" ||
+    city == "Mühldorf a. Inn" ||
+    city == "Ansbach" ||
+    city == "Neuburg-Schrobenhausen" ||
+    city == "Roth" ||
+    city == "Schwabach" ||
+    city == "Passau" ||
+    city == "Fürstenfeldbruck" ||
+    city == "Fürth" ||
+    city == "Hof" ||
+    city == "München" ||
+    city == "Deggendorf" ||
+    city == "Amberg" ||
+    city == "Regensburg" ||
+    city == "Ebersberg" ||
+    city == "Nürnberger Land" ||
+    city == "Landsberg am Lech" ||
+    city == "Tirschenreuth" ||
+    city == "Regen" ||
+    city == "Bad Kissingen" ||
+    city == "Freising" ||
+    city == "Main-Spessart" ||
+    city == "Miltenberg" ||
+    city == "Weilheim-Schongau" ||
+    city == "Kronach" ||
+    city == "Pfaffenhofen a.d. Ilm" ||
+    city == "Berchtesgadener Land" ||
+    city == "Kulmbach" ||
+    city == "Wunsiedel i. Fichtelgebirge" ||
+    city == "Günzburg" ||
+    city == "Amberg-Sulzbach" ||
+    city == "Oberallgäu" ||
+    city == "Dingolfing-Landau" ||
+    city == "Kitzingen" ||
+    city == "Ostallgäu" ||
+    city == "Saarpfalz-Kreis" ||
+    city == "Merzig-Wadern" ||
+    city == "Saarlouis" ||
+    city == "Regionalverband Saarbrücken" ||
+    city == "Neunkirchen" ||
+    city == "St. Wendel" ||
+    city == "Berlin" ||
+    city == "Elbe-Elster" ||
+    city == "Teltow-Fläming" ||
+    city == "Dahme-Spreewald" ||
+    city == "Havelland" ||
+    city == "Potsdam" ||
+    city == "Oberspreewald-Lausitz" ||
+    city == "Brandenburg an der Havel" ||
+    city == "Spree-Neiße" ||
+    city == "Prignitz" ||
+    city == "Uckermark" ||
+    city == "Cottbus" ||
+    city == "Ostprignitz-Ruppin" ||
+    city == "Oberhavel" ||
+    city == "Frankfurt (Oder)" ||
+    city == "Potsdam-Mittelmark" ||
+    city == "Barnim" ||
+    city == "Märkisch-Oderland" ||
+    city == "Oder-Spree" ||
+    city == "Nordwestmecklenburg" ||
+    city == "Schwerin" ||
+    city == "Ludwigslust-Parchim" ||
+    city == "Mecklenburgische Seenplatte" ||
+    city == "Vorpommern-Greifswald" ||
+    city == "Vorpommern-Rügen" ||
+    city == "Rostock" ||
+    city == "Vogtlandkreis" ||
+    city == "Meißen" ||
+    city == "Erzgebirgskreis" ||
+    city == "Mittelsachsen" ||
+    city == "Sächsische Schweiz-Osterzgebirge" ||
+    city == "Chemnitz" ||
+    city == "Dresden" ||
+    city == "Bautzen" ||
+    city == "Nordsachsen" ||
+    city == "Leipzig" ||
+    city == "Görlitz" ||
+    city == "Zwickau" ||
+    city == "Börde" ||
+    city == "Harz" ||
+    city == "Wittenberg" ||
+    city == "Dessau-Roßlau" ||
+    city == "Altmarkkreis Salzwedel" ||
+    city == "Saalekreis" ||
+    city == "Jerichower Land" ||
+    city == "Burgenlandkreis" ||
+    city == "Salzlandkreis" ||
+    city == "Stendal" ||
+    city == "Anhalt-Bitterfeld" ||
+    city == "Magdeburg" ||
+    city == "Halle (Saale)" ||
+    city == "Mansfeld-Südharz" ||
+    city == "Sonneberg" ||
+    city == "Schmalkalden-Meiningen" ||
+    city == "Gera" ||
+    city == "Hildburghausen" ||
+    city == "Weimar" ||
+    city == "Eichsfeld" ||
+    city == "Weimarer Land" ||
+    city == "Saale-Holzland-Kreis" ||
+    city == "Saale-Orla-Kreis" ||
+    city == "Erfurt" ||
+    city == "Unstrut-Hainich-Kreis" ||
+    city == "Kyffhäuserkreis" ||
+    city == "Sömmerda" ||
+    city == "Wartburgkreis" ||
+    city == "Saalfeld-Rudolstadt" ||
+    city == "Eisenach" ||
+    city == "Gotha" ||
+    city == "Suhl" ||
+    city == "Nordhausen" ||
+    city == "Jena" ||
+    city == "Ilm-Kreis" ||
+    city == "Greiz" ||
+    city == "Altenburger Land")){
+      city = "München"
+    }
+
+    //console.log(city);
+
     sd_factor.innerHTML = this.value;
-    result_header.innerHTML = calcLivesSaved("Munich", "4563", "1471508", "Bayern", this.value / 100)[0];
+    result_header.innerHTML = calcLivesSaved(city, "4563", "1471508", "Bayern", this.value / 100)[0];
 }
-
-// FUNCTION TO DISPLAY OUTPUT
-function square(num) {
-    return num * num;
-}
-
 //-------------------------- BACKBONE ------------------------------
 
     // ---------- RECOVERY RATES (Genesen / Covid19Faelle) --------------
