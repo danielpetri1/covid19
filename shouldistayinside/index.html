@@ -1,30 +1,29 @@
 <!doctype html>
 <html>
+
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9948073-6"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-	
+
 		gtag('config', 'UA-9948073-6');
 	</script>
-	
+
 	<!-- Google Analytics End -->
 
-	
-	<link rel="icon" 
-      type="image/png" 
-	  href="images/virus.png">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/virus.png">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Should I stay at home?</title>
 
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
-	
-	
+	<!-- Favicon End -->
+
 	<script src="js/mobile.js" type="text/javascript"></script>
 	<script src="https://unpkg.com/mathjs@6.6.4/dist/math.min.js"></script>
 </head>
@@ -50,411 +49,412 @@
 		<div id="body" class="home">
 			<div class="header">
 				<div>
-					<h2 id = "title_header">How many lives can be saved by social distancing in my city?</h2>
+					<h2 id="title_header">How many lives can be saved by social distancing in my city?</h2>
 				</div>
 			</div>
-			
+
 			<div class="body">
 				<div>
 					<div>
-						<span title="This the estimated number of lives saved given the social distancing parameter. For this we are using the most recent case numbers available. You can find out more about this in About."><h1 id="result_header">0</h1></span>
+						<span
+							title="The estimated number of lives saved given the social distancing parameter. For this we are using the most recent case numbers available. You can find out more about this in About.">
+							<h1 id="result_header">0</h1>
+						</span>
 					</div>
 
 					<p>People in Munich</p>
 
-
-
-<form action="index.html" method="get">
-	<input list="cities" name="city" value = "München">
-	<datalist id="cities">
-	<option value="Stormarn">
-<option value="Plön">
-<option value="Kiel">
-<option value="Lübeck">
-<option value="Segeberg">
-<option value="Steinburg">
-<option value="Ostholstein">
-<option value="Schleswig-Flensburg">
-<option value="Rendsburg-Eckernförde">
-<option value="Pinneberg">
-<option value="Nordfriesland">
-<option value="Flensburg">
-<option value="Dithmarschen">
-<option value="Herzogtum Lauenburg">
-<option value="Neumünster">
-<option value="Hamburg">
-<option value="Leer">
-<option value="Goslar">
-<option value="Stade">
-<option value="Ammerland">
-<option value="Wittmund">
-<option value="Hildesheim">
-<option value="Friesland">
-<option value="Holzminden">
-<option value="Delmenhorst">
-<option value="Wolfsburg">
-<option value="Schaumburg">
-<option value="Göttingen">
-<option value="Wesermarsch">
-<option value="Osterholz">
-<option value="Diepholz">
-<option value="Helmstedt">
-<option value="Northeim">
-<option value="Vechta">
-<option value="Emden">
-<option value="Rotenburg (Wümme)">
-<option value="Celle">
-<option value="Region Hannover">
-<option value="Grafschaft Bentheim">
-<option value="Osnabrück">
-<option value="Cuxhaven">
-<option value="Uelzen">
-<option value="Lüchow-Dannenberg">
-<option value="Gifhorn">
-<option value="Oldenburg (Oldb)">
-<option value="Wolfenbüttel">
-<option value="Hameln-Pyrmont">
-<option value="Heidekreis">
-<option value="Aurich">
-<option value="Nienburg (Weser)">
-<option value="Peine">
-<option value="Oldenburg">
-<option value="Lüneburg">
-<option value="Verden">
-<option value="Braunschweig">
-<option value="Wilhelmshaven">
-<option value="Emsland">
-<option value="Harburg">
-<option value="Salzgitter">
-<option value="Cloppenburg">
-<option value="Bremerhaven">
-<option value="Bremen">
-<option value="Dortmund">
-<option value="Bottrop">
-<option value="Mülheim an der Ruhr">
-<option value="Hochsauerlandkreis">
-<option value="Bonn">
-<option value="Münster">
-<option value="Steinfurt">
-<option value="Recklinghausen">
-<option value="Remscheid">
-<option value="Paderborn">
-<option value="Mettmann">
-<option value="Hamm">
-<option value="Gütersloh">
-<option value="Solingen">
-<option value="Rheinisch-Bergischer Kreis">
-<option value="Wuppertal">
-<option value="Rhein-Sieg-Kreis">
-<option value="Städteregion Aachen">
-<option value="Borken">
-<option value="Rhein-Kreis Neuss">
-<option value="Wesel">
-<option value="Soest">
-<option value="Rhein-Erft-Kreis">
-<option value="Olpe">
-<option value="Viersen">
-<option value="Krefeld">
-<option value="Essen">
-<option value="Herne">
-<option value="Coesfeld">
-<option value="Oberbergischer Kreis">
-<option value="Düsseldorf">
-<option value="Kleve">
-<option value="Bochum">
-<option value="Köln">
-<option value="Gelsenkirchen">
-<option value="Leverkusen">
-<option value="Heinsberg">
-<option value="Warendorf">
-<option value="Oberhausen">
-<option value="Bielefeld">
-<option value="Hagen">
-<option value="Minden-Lübbecke">
-<option value="Höxter">
-<option value="Euskirchen">
-<option value="Düren">
-<option value="Unna">
-<option value="Ennepe-Ruhr-Kreis">
-<option value="Mönchengladbach">
-<option value="Lippe">
-<option value="Märkischer Kreis">
-<option value="Siegen-Wittgenstein">
-<option value="Herford">
-<option value="Duisburg">
-<option value="Darmstadt">
-<option value="Fulda">
-<option value="Limburg-Weilburg">
-<option value="Gießen">
-<option value="Vogelsbergkreis">
-<option value="Wetteraukreis">
-<option value="Kassel">
-<option value="Rheingau-Taunus-Kreis">
-<option value="Waldeck-Frankenberg">
-<option value="Odenwaldkreis">
-<option value="Hersfeld-Rotenburg">
-<option value="Groß-Gerau">
-<option value="Frankfurt am Main">
-<option value="Marburg-Biedenkopf">
-<option value="Main-Kinzig-Kreis">
-<option value="Werra-Meißner-Kreis">
-<option value="Bergstraße">
-<option value="Schwalm-Eder-Kreis">
-<option value="Hochtaunuskreis">
-<option value="Wiesbaden">
-<option value="Lahn-Dill-Kreis">
-<option value="Main-Taunus-Kreis">
-<option value="Darmstadt-Dieburg">
-<option value="Offenbach">
-<option value="Offenbach am Main">
-<option value="Bernkastel-Wittlich">
-<option value="Landau in der Pfalz">
-<option value="Westerwaldkreis">
-<option value="Vulkaneifel">
-<option value="Birkenfeld">
-<option value="Trier-Saarburg">
-<option value="Südwestpfalz">
-<option value="Alzey-Worms">
-<option value="Pirmasens">
-<option value="Frankenthal (Pfalz)">
-<option value="Mayen-Koblenz">
-<option value="Speyer">
-<option value="Altenkirchen (Westerwald)">
-<option value="Kaiserslautern">
-<option value="Donnersbergkreis">
-<option value="Zweibrücken">
-<option value="Worms">
-<option value="Eifelkreis Bitburg-Prüm">
-<option value="Koblenz">
-<option value="Bad Kreuznach">
-<option value="Mainz">
-<option value="Bad Dürkheim">
-<option value="Cochem-Zell">
-<option value="Trier">
-<option value="Neuwied">
-<option value="Rhein-Hunsrück-Kreis">
-<option value="Ludwigshafen am Rhein">
-<option value="Germersheim">
-<option value="Kusel">
-<option value="Rhein-Pfalz-Kreis">
-<option value="Südliche Weinstraße">
-<option value="Rhein-Lahn-Kreis">
-<option value="Mainz-Bingen">
-<option value="Ahrweiler">
-<option value="Neustadt an der Weinstraße">
-<option value="Esslingen">
-<option value="Rottweil">
-<option value="Neckar-Odenwald-Kreis">
-<option value="Ravensburg">
-<option value="Heilbronn">
-<option value="Tübingen">
-<option value="Ludwigsburg">
-<option value="Breisgau-Hochschwarzwald">
-<option value="Göppingen">
-<option value="Rhein-Neckar-Kreis">
-<option value="Tuttlingen">
-<option value="Biberach">
-<option value="Waldshut">
-<option value="Mannheim">
-<option value="Rastatt">
-<option value="Zollernalbkreis">
-<option value="Schwäbisch Hall">
-<option value="Böblingen">
-<option value="Konstanz">
-<option value="Karlsruhe">
-<option value="Ulm">
-<option value="Hohenlohekreis">
-<option value="Lörrach">
-<option value="Rems-Murr-Kreis">
-<option value="Schwarzwald-Baar-Kreis">
-<option value="Emmendingen">
-<option value="Sigmaringen">
-<option value="Bodenseekreis">
-<option value="Freudenstadt">
-<option value="Heidenheim">
-<option value="Ostalbkreis">
-<option value="Alb-Donau-Kreis">
-<option value="Freiburg im Breisgau">
-<option value="Main-Tauber-Kreis">
-<option value="Pforzheim">
-<option value="Calw">
-<option value="Stuttgart">
-<option value="Enzkreis">
-<option value="Reutlingen">
-<option value="Ortenaukreis">
-<option value="Heidelberg">
-<option value="Baden-Baden">
-<option value="Freyung-Grafenau">
-<option value="Kelheim">
-<option value="Augsburg">
-<option value="Erding">
-<option value="Coburg">
-<option value="Starnberg">
-<option value="Lichtenfels">
-<option value="Dachau">
-<option value="Neustadt a.d. Waldnaab">
-<option value="Bayreuth">
-<option value="Bamberg">
-<option value="Dillingen a.d. Donau">
-<option value="Miesbach">
-<option value="Weißenburg-Gunzenhausen">
-<option value="Altötting">
-<option value="Straubing">
-<option value="Schwandorf">
-<option value="Rhön-Grabfeld">
-<option value="Landshut">
-<option value="Donau-Ries">
-<option value="Unterallgäu">
-<option value="Nürnberg">
-<option value="Lindau (Bodensee)">
-<option value="Memmingen">
-<option value="Neustadt a.d. Aisch-Bad Windsheim">
-<option value="Kaufbeuren">
-<option value="Ingolstadt">
-<option value="Aschaffenburg">
-<option value="Cham">
-<option value="Neu-Ulm">
-<option value="Garmisch-Partenkirchen">
-<option value="Kempten (Allgäu)">
-<option value="Eichstätt">
-<option value="Rottal-Inn">
-<option value="Schweinfurt">
-<option value="Aichach-Friedberg">
-<option value="Straubing-Bogen">
-<option value="Forchheim">
-<option value="Würzburg">
-<option value="Traunstein">
-<option value="Bad Tölz-Wolfratshausen">
-<option value="Weiden i.d. OPf.">
-<option value="Erlangen-Höchstadt">
-<option value="Haßberge">
-<option value="Neumarkt i.d. OPf.">
-<option value="Rosenheim">
-<option value="Erlangen">
-<option value="Mühldorf a. Inn">
-<option value="Ansbach">
-<option value="Neuburg-Schrobenhausen">
-<option value="Roth">
-<option value="Schwabach">
-<option value="Passau">
-<option value="Fürstenfeldbruck">
-<option value="Fürth">
-<option value="Hof">
-<option value="München">
-<option value="Deggendorf">
-<option value="Amberg">
-<option value="Regensburg">
-<option value="Ebersberg">
-<option value="Nürnberger Land">
-<option value="Landsberg am Lech">
-<option value="Tirschenreuth">
-<option value="Regen">
-<option value="Bad Kissingen">
-<option value="Freising">
-<option value="Main-Spessart">
-<option value="Miltenberg">
-<option value="Weilheim-Schongau">
-<option value="Kronach">
-<option value="Pfaffenhofen a.d. Ilm">
-<option value="Berchtesgadener Land">
-<option value="Kulmbach">
-<option value="Wunsiedel i. Fichtelgebirge">
-<option value="Günzburg">
-<option value="Amberg-Sulzbach">
-<option value="Oberallgäu">
-<option value="Dingolfing-Landau">
-<option value="Kitzingen">
-<option value="Ostallgäu">
-<option value="Saarpfalz-Kreis">
-<option value="Merzig-Wadern">
-<option value="Saarlouis">
-<option value="Regionalverband Saarbrücken">
-<option value="Neunkirchen">
-<option value="St. Wendel">
-<option value="Berlin">
-<option value="Elbe-Elster">
-<option value="Teltow-Fläming">
-<option value="Dahme-Spreewald">
-<option value="Havelland">
-<option value="Potsdam">
-<option value="Oberspreewald-Lausitz">
-<option value="Brandenburg an der Havel">
-<option value="Spree-Neiße">
-<option value="Prignitz">
-<option value="Uckermark">
-<option value="Cottbus">
-<option value="Ostprignitz-Ruppin">
-<option value="Oberhavel">
-<option value="Frankfurt (Oder)">
-<option value="Potsdam-Mittelmark">
-<option value="Barnim">
-<option value="Märkisch-Oderland">
-<option value="Oder-Spree">
-<option value="Nordwestmecklenburg">
-<option value="Schwerin">
-<option value="Ludwigslust-Parchim">
-<option value="Mecklenburgische Seenplatte">
-<option value="Vorpommern-Greifswald">
-<option value="Vorpommern-Rügen">
-<option value="Rostock">
-<option value="Vogtlandkreis">
-<option value="Meißen">
-<option value="Erzgebirgskreis">
-<option value="Mittelsachsen">
-<option value="Sächsische Schweiz-Osterzgebirge">
-<option value="Chemnitz">
-<option value="Dresden">
-<option value="Bautzen">
-<option value="Nordsachsen">
-<option value="Leipzig">
-<option value="Görlitz">
-<option value="Zwickau">
-<option value="Börde">
-<option value="Harz">
-<option value="Wittenberg">
-<option value="Dessau-Roßlau">
-<option value="Altmarkkreis Salzwedel">
-<option value="Saalekreis">
-<option value="Jerichower Land">
-<option value="Burgenlandkreis">
-<option value="Salzlandkreis">
-<option value="Stendal">
-<option value="Anhalt-Bitterfeld">
-<option value="Magdeburg">
-<option value="Halle (Saale)">
-<option value="Mansfeld-Südharz">
-<option value="Sonneberg">
-<option value="Schmalkalden-Meiningen">
-<option value="Gera">
-<option value="Hildburghausen">
-<option value="Weimar">
-<option value="Eichsfeld">
-<option value="Weimarer Land">
-<option value="Saale-Holzland-Kreis">
-<option value="Saale-Orla-Kreis">
-<option value="Erfurt">
-<option value="Unstrut-Hainich-Kreis">
-<option value="Kyffhäuserkreis">
-<option value="Sömmerda">
-<option value="Wartburgkreis">
-<option value="Saalfeld-Rudolstadt">
-<option value="Eisenach">
-<option value="Gotha">
-<option value="Suhl">
-<option value="Nordhausen">
-<option value="Jena">
-<option value="Ilm-Kreis">
-<option value="Greiz">
-<option value="Altenburger Land">
-  </datalist>
-  <input type="submit">
-</form>
+					<form action="index.html" method="get">
+						<input list="cities" name="city" value="München" pattern="[A-Za-z]">
+						<datalist id="cities">
+							<option value="Stormarn">
+							<option value="Plön">
+							<option value="Kiel">
+							<option value="Lübeck">
+							<option value="Segeberg">
+							<option value="Steinburg">
+							<option value="Ostholstein">
+							<option value="Schleswig-Flensburg">
+							<option value="Rendsburg-Eckernförde">
+							<option value="Pinneberg">
+							<option value="Nordfriesland">
+							<option value="Flensburg">
+							<option value="Dithmarschen">
+							<option value="Herzogtum Lauenburg">
+							<option value="Neumünster">
+							<option value="Hamburg">
+							<option value="Leer">
+							<option value="Goslar">
+							<option value="Stade">
+							<option value="Ammerland">
+							<option value="Wittmund">
+							<option value="Hildesheim">
+							<option value="Friesland">
+							<option value="Holzminden">
+							<option value="Delmenhorst">
+							<option value="Wolfsburg">
+							<option value="Schaumburg">
+							<option value="Göttingen">
+							<option value="Wesermarsch">
+							<option value="Osterholz">
+							<option value="Diepholz">
+							<option value="Helmstedt">
+							<option value="Northeim">
+							<option value="Vechta">
+							<option value="Emden">
+							<option value="Rotenburg (Wümme)">
+							<option value="Celle">
+							<option value="Region Hannover">
+							<option value="Grafschaft Bentheim">
+							<option value="Osnabrück">
+							<option value="Cuxhaven">
+							<option value="Uelzen">
+							<option value="Lüchow-Dannenberg">
+							<option value="Gifhorn">
+							<option value="Oldenburg (Oldb)">
+							<option value="Wolfenbüttel">
+							<option value="Hameln-Pyrmont">
+							<option value="Heidekreis">
+							<option value="Aurich">
+							<option value="Nienburg (Weser)">
+							<option value="Peine">
+							<option value="Oldenburg">
+							<option value="Lüneburg">
+							<option value="Verden">
+							<option value="Braunschweig">
+							<option value="Wilhelmshaven">
+							<option value="Emsland">
+							<option value="Harburg">
+							<option value="Salzgitter">
+							<option value="Cloppenburg">
+							<option value="Bremerhaven">
+							<option value="Bremen">
+							<option value="Dortmund">
+							<option value="Bottrop">
+							<option value="Mülheim an der Ruhr">
+							<option value="Hochsauerlandkreis">
+							<option value="Bonn">
+							<option value="Münster">
+							<option value="Steinfurt">
+							<option value="Recklinghausen">
+							<option value="Remscheid">
+							<option value="Paderborn">
+							<option value="Mettmann">
+							<option value="Hamm">
+							<option value="Gütersloh">
+							<option value="Solingen">
+							<option value="Rheinisch-Bergischer Kreis">
+							<option value="Wuppertal">
+							<option value="Rhein-Sieg-Kreis">
+							<option value="Städteregion Aachen">
+							<option value="Borken">
+							<option value="Rhein-Kreis Neuss">
+							<option value="Wesel">
+							<option value="Soest">
+							<option value="Rhein-Erft-Kreis">
+							<option value="Olpe">
+							<option value="Viersen">
+							<option value="Krefeld">
+							<option value="Essen">
+							<option value="Herne">
+							<option value="Coesfeld">
+							<option value="Oberbergischer Kreis">
+							<option value="Düsseldorf">
+							<option value="Kleve">
+							<option value="Bochum">
+							<option value="Köln">
+							<option value="Gelsenkirchen">
+							<option value="Leverkusen">
+							<option value="Heinsberg">
+							<option value="Warendorf">
+							<option value="Oberhausen">
+							<option value="Bielefeld">
+							<option value="Hagen">
+							<option value="Minden-Lübbecke">
+							<option value="Höxter">
+							<option value="Euskirchen">
+							<option value="Düren">
+							<option value="Unna">
+							<option value="Ennepe-Ruhr-Kreis">
+							<option value="Mönchengladbach">
+							<option value="Lippe">
+							<option value="Märkischer Kreis">
+							<option value="Siegen-Wittgenstein">
+							<option value="Herford">
+							<option value="Duisburg">
+							<option value="Darmstadt">
+							<option value="Fulda">
+							<option value="Limburg-Weilburg">
+							<option value="Gießen">
+							<option value="Vogelsbergkreis">
+							<option value="Wetteraukreis">
+							<option value="Kassel">
+							<option value="Rheingau-Taunus-Kreis">
+							<option value="Waldeck-Frankenberg">
+							<option value="Odenwaldkreis">
+							<option value="Hersfeld-Rotenburg">
+							<option value="Groß-Gerau">
+							<option value="Frankfurt am Main">
+							<option value="Marburg-Biedenkopf">
+							<option value="Main-Kinzig-Kreis">
+							<option value="Werra-Meißner-Kreis">
+							<option value="Bergstraße">
+							<option value="Schwalm-Eder-Kreis">
+							<option value="Hochtaunuskreis">
+							<option value="Wiesbaden">
+							<option value="Lahn-Dill-Kreis">
+							<option value="Main-Taunus-Kreis">
+							<option value="Darmstadt-Dieburg">
+							<option value="Offenbach">
+							<option value="Offenbach am Main">
+							<option value="Bernkastel-Wittlich">
+							<option value="Landau in der Pfalz">
+							<option value="Westerwaldkreis">
+							<option value="Vulkaneifel">
+							<option value="Birkenfeld">
+							<option value="Trier-Saarburg">
+							<option value="Südwestpfalz">
+							<option value="Alzey-Worms">
+							<option value="Pirmasens">
+							<option value="Frankenthal (Pfalz)">
+							<option value="Mayen-Koblenz">
+							<option value="Speyer">
+							<option value="Altenkirchen (Westerwald)">
+							<option value="Kaiserslautern">
+							<option value="Donnersbergkreis">
+							<option value="Zweibrücken">
+							<option value="Worms">
+							<option value="Eifelkreis Bitburg-Prüm">
+							<option value="Koblenz">
+							<option value="Bad Kreuznach">
+							<option value="Mainz">
+							<option value="Bad Dürkheim">
+							<option value="Cochem-Zell">
+							<option value="Trier">
+							<option value="Neuwied">
+							<option value="Rhein-Hunsrück-Kreis">
+							<option value="Ludwigshafen am Rhein">
+							<option value="Germersheim">
+							<option value="Kusel">
+							<option value="Rhein-Pfalz-Kreis">
+							<option value="Südliche Weinstraße">
+							<option value="Rhein-Lahn-Kreis">
+							<option value="Mainz-Bingen">
+							<option value="Ahrweiler">
+							<option value="Neustadt an der Weinstraße">
+							<option value="Esslingen">
+							<option value="Rottweil">
+							<option value="Neckar-Odenwald-Kreis">
+							<option value="Ravensburg">
+							<option value="Heilbronn">
+							<option value="Tübingen">
+							<option value="Ludwigsburg">
+							<option value="Breisgau-Hochschwarzwald">
+							<option value="Göppingen">
+							<option value="Rhein-Neckar-Kreis">
+							<option value="Tuttlingen">
+							<option value="Biberach">
+							<option value="Waldshut">
+							<option value="Mannheim">
+							<option value="Rastatt">
+							<option value="Zollernalbkreis">
+							<option value="Schwäbisch Hall">
+							<option value="Böblingen">
+							<option value="Konstanz">
+							<option value="Karlsruhe">
+							<option value="Ulm">
+							<option value="Hohenlohekreis">
+							<option value="Lörrach">
+							<option value="Rems-Murr-Kreis">
+							<option value="Schwarzwald-Baar-Kreis">
+							<option value="Emmendingen">
+							<option value="Sigmaringen">
+							<option value="Bodenseekreis">
+							<option value="Freudenstadt">
+							<option value="Heidenheim">
+							<option value="Ostalbkreis">
+							<option value="Alb-Donau-Kreis">
+							<option value="Freiburg im Breisgau">
+							<option value="Main-Tauber-Kreis">
+							<option value="Pforzheim">
+							<option value="Calw">
+							<option value="Stuttgart">
+							<option value="Enzkreis">
+							<option value="Reutlingen">
+							<option value="Ortenaukreis">
+							<option value="Heidelberg">
+							<option value="Baden-Baden">
+							<option value="Freyung-Grafenau">
+							<option value="Kelheim">
+							<option value="Augsburg">
+							<option value="Erding">
+							<option value="Coburg">
+							<option value="Starnberg">
+							<option value="Lichtenfels">
+							<option value="Dachau">
+							<option value="Neustadt a.d. Waldnaab">
+							<option value="Bayreuth">
+							<option value="Bamberg">
+							<option value="Dillingen a.d. Donau">
+							<option value="Miesbach">
+							<option value="Weißenburg-Gunzenhausen">
+							<option value="Altötting">
+							<option value="Straubing">
+							<option value="Schwandorf">
+							<option value="Rhön-Grabfeld">
+							<option value="Landshut">
+							<option value="Donau-Ries">
+							<option value="Unterallgäu">
+							<option value="Nürnberg">
+							<option value="Lindau (Bodensee)">
+							<option value="Memmingen">
+							<option value="Neustadt a.d. Aisch-Bad Windsheim">
+							<option value="Kaufbeuren">
+							<option value="Ingolstadt">
+							<option value="Aschaffenburg">
+							<option value="Cham">
+							<option value="Neu-Ulm">
+							<option value="Garmisch-Partenkirchen">
+							<option value="Kempten (Allgäu)">
+							<option value="Eichstätt">
+							<option value="Rottal-Inn">
+							<option value="Schweinfurt">
+							<option value="Aichach-Friedberg">
+							<option value="Straubing-Bogen">
+							<option value="Forchheim">
+							<option value="Würzburg">
+							<option value="Traunstein">
+							<option value="Bad Tölz-Wolfratshausen">
+							<option value="Weiden i.d. OPf.">
+							<option value="Erlangen-Höchstadt">
+							<option value="Haßberge">
+							<option value="Neumarkt i.d. OPf.">
+							<option value="Rosenheim">
+							<option value="Erlangen">
+							<option value="Mühldorf a. Inn">
+							<option value="Ansbach">
+							<option value="Neuburg-Schrobenhausen">
+							<option value="Roth">
+							<option value="Schwabach">
+							<option value="Passau">
+							<option value="Fürstenfeldbruck">
+							<option value="Fürth">
+							<option value="Hof">
+							<option value="München">
+							<option value="Deggendorf">
+							<option value="Amberg">
+							<option value="Regensburg">
+							<option value="Ebersberg">
+							<option value="Nürnberger Land">
+							<option value="Landsberg am Lech">
+							<option value="Tirschenreuth">
+							<option value="Regen">
+							<option value="Bad Kissingen">
+							<option value="Freising">
+							<option value="Main-Spessart">
+							<option value="Miltenberg">
+							<option value="Weilheim-Schongau">
+							<option value="Kronach">
+							<option value="Pfaffenhofen a.d. Ilm">
+							<option value="Berchtesgadener Land">
+							<option value="Kulmbach">
+							<option value="Wunsiedel i. Fichtelgebirge">
+							<option value="Günzburg">
+							<option value="Amberg-Sulzbach">
+							<option value="Oberallgäu">
+							<option value="Dingolfing-Landau">
+							<option value="Kitzingen">
+							<option value="Ostallgäu">
+							<option value="Saarpfalz-Kreis">
+							<option value="Merzig-Wadern">
+							<option value="Saarlouis">
+							<option value="Regionalverband Saarbrücken">
+							<option value="Neunkirchen">
+							<option value="St. Wendel">
+							<option value="Berlin">
+							<option value="Elbe-Elster">
+							<option value="Teltow-Fläming">
+							<option value="Dahme-Spreewald">
+							<option value="Havelland">
+							<option value="Potsdam">
+							<option value="Oberspreewald-Lausitz">
+							<option value="Brandenburg an der Havel">
+							<option value="Spree-Neiße">
+							<option value="Prignitz">
+							<option value="Uckermark">
+							<option value="Cottbus">
+							<option value="Ostprignitz-Ruppin">
+							<option value="Oberhavel">
+							<option value="Frankfurt (Oder)">
+							<option value="Potsdam-Mittelmark">
+							<option value="Barnim">
+							<option value="Märkisch-Oderland">
+							<option value="Oder-Spree">
+							<option value="Nordwestmecklenburg">
+							<option value="Schwerin">
+							<option value="Ludwigslust-Parchim">
+							<option value="Mecklenburgische Seenplatte">
+							<option value="Vorpommern-Greifswald">
+							<option value="Vorpommern-Rügen">
+							<option value="Rostock">
+							<option value="Vogtlandkreis">
+							<option value="Meißen">
+							<option value="Erzgebirgskreis">
+							<option value="Mittelsachsen">
+							<option value="Sächsische Schweiz-Osterzgebirge">
+							<option value="Chemnitz">
+							<option value="Dresden">
+							<option value="Bautzen">
+							<option value="Nordsachsen">
+							<option value="Leipzig">
+							<option value="Görlitz">
+							<option value="Zwickau">
+							<option value="Börde">
+							<option value="Harz">
+							<option value="Wittenberg">
+							<option value="Dessau-Roßlau">
+							<option value="Altmarkkreis Salzwedel">
+							<option value="Saalekreis">
+							<option value="Jerichower Land">
+							<option value="Burgenlandkreis">
+							<option value="Salzlandkreis">
+							<option value="Stendal">
+							<option value="Anhalt-Bitterfeld">
+							<option value="Magdeburg">
+							<option value="Halle (Saale)">
+							<option value="Mansfeld-Südharz">
+							<option value="Sonneberg">
+							<option value="Schmalkalden-Meiningen">
+							<option value="Gera">
+							<option value="Hildburghausen">
+							<option value="Weimar">
+							<option value="Eichsfeld">
+							<option value="Weimarer Land">
+							<option value="Saale-Holzland-Kreis">
+							<option value="Saale-Orla-Kreis">
+							<option value="Erfurt">
+							<option value="Unstrut-Hainich-Kreis">
+							<option value="Kyffhäuserkreis">
+							<option value="Sömmerda">
+							<option value="Wartburgkreis">
+							<option value="Saalfeld-Rudolstadt">
+							<option value="Eisenach">
+							<option value="Gotha">
+							<option value="Suhl">
+							<option value="Nordhausen">
+							<option value="Jena">
+							<option value="Ilm-Kreis">
+							<option value="Greiz">
+							<option value="Altenburger Land">
+						</datalist>
+						<input type="submit">
+					</form>
 
 				</div>
 			</div>
-			
-			<div class = "percent">
-				<p>🧑‍🤝‍🧑 Social distancing factor: <span id = "sd_factor">0</span> %</p>
+
+			<div class="percent">
+				<p>🧑‍🤝‍🧑 Social distancing factor: <span id="sd_factor">0</span> %</p>
 			</div>
 
 			<div class="slideContainer">
@@ -469,38 +469,47 @@
 						<summary>🤓 Details for nerds</summary>
 						<p>Hier steht der Text, der auf- und zugeklappt werden soll.</p>
 					</details>
-					
-					<h1><a name = "jumpabout">📝 About</a></h1>
+
+					<h1><a name="jumpabout">📝 About</a></h1>
 					<p>
 						Germany currently is the 5th hardest-hit country worldwide by cases of COVID-19.
-						As states such as Bavaria enter their fourth week of quarantine, one may start to wonder whether lockdowns are sensible at all. 
-						To avoid such misconceptions and educate the broad public on the impact staying at home can have, 
-						we created a website in which the user can enter their city and modify the percentage of its population spending 
-						their time in isolation, obtaining the number of lives saved as a result. A social distancing factor of 0% corresponds 
-						to the worst-case scenario where people go on their days as usual, visiting restaurants, concerts, parties, and other social 
-						gatherings. As the slider is moved to the right, the difference in fatal COVID-19 cases is shown to the user as the number of lives spared.
-						<br/><br />
-						We believe that combining a very intuitive to use website with an approach favoring positive reinforcement has a much greater potential 
-						to change a societies’ behavior than its draconian counterpart: using fear, panic, and death counts to coerce people into confinement. 
-						If interested, the user can access an explanatory page detailing our mathematical ansatz or ways one can integrate social distancing in their 
+						As states such as Bavaria enter their fourth week of quarantine, one may start to wonder whether
+						lockdowns are sensible at all.
+						To avoid such misconceptions and educate the broad public on the impact staying at home can
+						have,
+						we created a website in which the user can enter their city and modify the percentage of its
+						population spending
+						their time in isolation, obtaining the number of lives saved as a result. A social distancing
+						factor of 0% corresponds
+						to the worst-case scenario where people go on their days as usual, visiting restaurants,
+						concerts, parties, and other social
+						gatherings. As the slider is moved to the right, the difference in fatal COVID-19 cases is shown
+						to the user as the number of lives spared.
+						<br /><br />
+						We believe that combining a very intuitive to use website with an approach favoring positive
+						reinforcement has a much greater potential
+						to change a societies’ behavior than its draconian counterpart: using fear, panic, and death
+						counts to coerce people into confinement.
+						If interested, the user can access an explanatory page detailing our mathematical ansatz or ways
+						one can integrate social distancing in their
 						lives in a healthy manner.
 					</p>
-					
+
 				</div>
-			
+
 
 			</div>
 
-		<div id="footer">
-			<div>
-				<a href="impressum.html">Impressum</a>
-				<p>&copy; We got this fam!</p>
+			<div id="footer">
+				<div>
+					<a href="impressum.html">Impressum</a>
+					<p>&copy; We got this fam!</p>
+				</div>
 			</div>
+
 		</div>
-
-	</div>
 </body>
 
-<script src = "main.js"></script>
+<script src="main.js"></script>
 
 </html>
