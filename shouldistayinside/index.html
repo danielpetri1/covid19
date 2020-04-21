@@ -56,7 +56,7 @@
 					</div>
 					<div class = "block">
 						<p>in</p>
-						<input id="city_input" list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.()-]{0,64}"  placeholder = "Enter city here">
+						<input id="city_input" list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.()-]{0,64}"  placeholder = "Enter city here 🏙️">
 						<button id="close-image" type="button" onclick="refreshCity()" ><img src="images/reload.png"></button>
 						
 						<datalist id="cities">
@@ -447,7 +447,7 @@
 			</div>
 			
 			<div class = "percent">
-				<p>🧑‍🤝‍🧑 Social distancing factor: <span id = "sd_factor">0</span> %</p>
+				<p>🧑‍🤝‍🧑 Social distancing factor: <span id = "sd_factor">0% (Move the slider below 👇)</span></p>
 			</div>
 
 			<div class="slideContainer">
@@ -504,7 +504,8 @@
 						<br/><br/>
 						This website allows you to enter the German city you’re located in and simulate how many lives are saved when a social distancing factor is changed. A factor of 0% models what would happen if we as a society didn’t 
 						change our behavior at all and still went out to party, eat and mingle. As the factor increases, the disease’s rate of spread gets closer to what was observed in countries such as China, that took rigorous measures 
-						to stop the exponential growth of new infections. 
+						to stop the exponential growth of new infections. Note that the exact interpretation of the social distancing factor value is difficult, therefore take our suggestion with a grain of salt. 
+						You can however look up the mathematical meaning of the factor on our simulation in the 'Details for nerds' tab.
 						<br/><br/>
 						Our unique approach of showing lives saved instead of lost is an auspicious twist on the grim data usually made available. The data contained here is pulled daily automatically from Fusionbase, a partner of this 
 						year’s special HackaTUM edition. 

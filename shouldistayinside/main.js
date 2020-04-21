@@ -427,8 +427,26 @@ getDatabase().then(function(db){
       }
 
       //console.log(city);
+      if (document.getElementById("city_input").value == "") {
+        document.getElementById("city_input").value = "München"
+      }
 
-      sd_factor.innerHTML = this.value;
+      if (this.value == 0){
+        sd_factor.innerHTML = this.value + "%" + " (life as usual 🌍)";
+      } else if (this.value <= 20){
+        sd_factor.innerHTML = this.value + "%" + " (e.g. increasing hygiene 🧼🖐, decreasing parties 🥳)";
+      } else if (this.value <= 30){
+        sd_factor.innerHTML = this.value + "%" + " (e.g. increasing home office 💼)";
+      } else if (this.value <= 50){
+        sd_factor.innerHTML = this.value + "%" + " (e.g. closing schools 🏫)";
+      } else if (this.value <= 65){
+        sd_factor.innerHTML = this.value + "%" + " (e.g. lockdown 🏠 for a few weeks)";
+      } else if (this.value <= 80){
+        sd_factor.innerHTML = this.value + "%" + " (e.g. strict lockdown 🏠 for a few months)";
+      } else if (this.value > 80){
+        sd_factor.innerHTML = this.value + "%" + " (e.g. very long and strict lockdown 🚫)";
+      }
+
       var dbInfo = getData(city, db);
 
       //console.log(dbInfo[0])
