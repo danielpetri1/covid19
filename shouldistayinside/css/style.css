@@ -93,6 +93,28 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 }
+
+/*language selection*/
+#header div.language {
+	display: block;
+	float: right;
+}
+
+#header div.language ul li{
+	margin: 0 2px 0 2px;
+}
+
+#header div.language a{
+	font-size: 15px;
+	font-family: lato-regular-webfont;
+	color: black
+}
+#header div.language p{
+	font-size: 12px;
+	font-family: lato-regular-webfont;
+	color: black
+}
+
 /*colour of the selected link*/
 #header div ul li.selected a, #header div ul li.selected a:hover {
 	color: #ffffff;
@@ -103,26 +125,6 @@ img {
 	z-index: 80;
 }
 
-/*Github icon stuff -----------------------*/
-
-#header div .connect {
-	float: right;
-	height: 30px;
-	padding-top: 12px;
-	width: auto;
-}
-
-#header div .connect a {
-	background: url(../images/icons.png) no-repeat;
-	display: block;
-	height: 50px;
-	padding-right: 10px;
-	text-indent: -99999px;
-	width: 50px;
-}
-#header div .connect a.github {
-	background-position: 0 0;
-}
 
 
 
@@ -256,7 +258,7 @@ img {
 #body.home div.footer {
 	margin: 0;
 	max-width: none;
-	padding: 0 0 50px;
+	padding: 0 0 0;
 	width: 100%;
 }
 
@@ -308,7 +310,7 @@ img {
 #footer div {
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 59px 0 13px; /* 59 0 13 */
+	padding: 15px 0 0; /* 59 0 13 */
 	max-width: 960px;
 }
 #footer div a {
@@ -322,7 +324,7 @@ img {
 }
 
 
-#footer div p {
+#footer div.love p {
 	color: black;
 	display: block;
 	font-family: roboto-regular-webfont;
@@ -330,10 +332,44 @@ img {
 	font-weight: normal;
 	line-height: 15px;
 	margin: 0;
-	padding: 33px 0 50px;
+	padding: 0 0 0;
 	text-align: center;
 	text-transform: none;
 }
+
+/*so that everything is alligned in the impressum*/
+#footer ul{
+	
+	list-style: none outside none;
+}
+
+#footer a.test{
+	padding-left: 20px;
+}
+
+/*Github icon stuff -----------------------*/
+
+#footer div .connect {
+	float: left;
+	height: 30px;
+	padding-top: 12px;
+	width: auto;
+}
+
+#footer div .connect a {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	height: 50px;
+	padding-right: 10px;
+	text-indent: -99999px;
+	width: 50px;
+}
+#footer div .connect a.github {
+	background-position: 0 0;
+}
+
+
+
 
 
 /* SLIDER CSS START */

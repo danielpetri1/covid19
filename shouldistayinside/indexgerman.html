@@ -29,6 +29,7 @@
 						<a href="#jumpabout">About</a>
 					</li>
 				</ul>
+
 				<div class = "language">
 					<ul id = "chooselanguage">
 						<li class = "german">
@@ -39,13 +40,14 @@
 						</li>
 					</ul>
 				</div>
+
 			</div>
 		</div>
 
 		<div id="body" class="home">
 			<div class="header">
 				<div>
-					<h2 id = "title_header">How many lives can be saved by social distancing in my city?</h2>
+					<h2 id = "title_header">Wie viele Leben können mit Social Distancing in meiner Stadt gerettet werden?</h2>
 				</div>
 			</div>
 			
@@ -56,7 +58,7 @@
 					</div>
 					<div class = "block">
 						<p>in</p>
-						<input id="city_input" list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.()-]{0,64}"  placeholder = "Enter city here">
+						<input id="city_input" list="cities" name="city" pattern="[A-Za-zäöüÄÖÜß.()-]{0,64}"  placeholder = "Stadtname eingeben">
 						<button id="close-image" type="button" onclick="refreshCity()" ><img src="images/reload.png"></button>
 						
 						<datalist id="cities">
@@ -447,7 +449,7 @@
 			</div>
 			
 			<div class = "percent">
-				<p>🧑‍🤝‍🧑 Social distancing factor: <span id = "sd_factor">0</span> %</p>
+				<p>🧑‍🤝‍🧑 Social-Distancing-Faktor: <span id = "sd_factor">0</span> %</p>
 			</div>
 
 			<div class="slideContainer">
@@ -455,40 +457,40 @@
 					<input type="range" min="0" max="100" value="0" id="myRange" class="slider">
 				</div>
 				<details>
-					<summary>🤓 Details for nerds</summary>
+					<summary>🤓 Details für Nerds</summary>
 					<p id="R_eff">
 						R_eff = 
 					</p>
 					<p id="casesnerd">
-						Cases: (considering city and Landkreis!)
+						Fälle: (bezüglich Stadt und Landkreis!)
 					</p>
 					<p id="popnerd">
-						Population: (considering city and Landkreis!)
+						Einwohnerzahl: (bezüglich Stadt und Landkreis!)
 					</p>
 					<p id="contact_chosen">
-						Contact rate (0% social distancing): 
+						Kontaktrate (0% Social Distancing): 
 					</p>
 					<p id="contact_max">
-						Contact rate (0% social distancing): 
+						Kontaktrate (0% Social Distancing): 
 					</p>
 					<p id="contact_min">
-						Contact rate (100% social distancing):
+						Kontaktrate (100% Social Distancing):
 					</p>
 					<p id="percentage0sd_nerd">
-						Percentage infected in chosen city with 0% social distancing after end of pandemic: 
+						Prozentzahl infizierter Personen in der ausgewählten Sadt mit 0% Social Distancing zum Ende der Pandemie: 
 					</p>
 					<p id="percentagesd_nerd">
 						Percentage infected in chosen city with 0% social distancing after end of pandemic:
 					</p>
 					<p id="dataset_update">
-						Data used from Fusionbase updated on: 
+						Genutzte Daten von Fusionbase wurden als letztes geupdatet am:
 					</p>
 					<p>
-						<a href="https://github.com/danielpetri1/covid19/raw/master/Matlab/sirmodel.mlapp">Try our MATLAB applet to play around with the parameters</a>. 
-						You can report any errors on our "Issues" tab on GitHub!
+						<a href="https://github.com/danielpetri1/covid19/raw/master/Matlab/sirmodel.mlapp">Probiert unser MATLAB applet aus und spielt selbst mit den Parametern</a>. 
+						Wenn euch Fehler auffallen, weißt uns gerne auf GitHub unter "Issues" darauf hin!
 					</p>
 					<p>
-						<a href="Mathematics.pdf" download>Download the in-depth mathematical explanation on what these parameters mean and how this simulation works.</a>
+						<a href="Mathematics.pdf" download>Downloade die detaillierte mathematische Erklärung was diese Parameter bedeuten und wie die Simulation funktioniert.</a>
 					</p>
 				</details>
 			</div>
@@ -497,26 +499,29 @@
 				<div>
 					
 					<h1><a name = "jumpabout">📝 About</a></h1>
-					<p>
-						Hey there! We are three TUM BSc. students of the Department of Informatics aiming to raise awareness on the importance of staying inside during the COVID-19 pandemic.
+					<p>	
+						Hey! Wir sind drei TUM BSc. Studenten von der Informatikfakultät und unser Ziel ist das Bewusstsein dafür zu schärfen, wie wichtig es ist, während der COVID-19-Pandemie zu Hause zu bleiben.
 						<br/><br/>
-						As our home state Bavaria enters its fourth week of quarantine in a country badly hit in terms of cases, we’re deeply concerned that the general public may put its guard down when it comes to sheltering in place. 
+						Unser Heimatbundesland Bayern tritt nun seine vierte Woche in Quarantäne an und ist eines der Bundesländer welches im Bezug auf infizierter Fälle am schlimmsten getroffen ist. Daher sind 
+						wir zutiefst besorgt darüber, dass die breite Öffentlichkeit die Nötigen Maßnahmen trifft und zu Hause bleiben. 
 						<br/><br/>
-						This website allows you to enter the German city you’re located in and simulate how many lives are saved when a social distancing factor is changed. A factor of 0% models what would happen if we as a society didn’t 
-						change our behavior at all and still went out to party, eat and mingle. As the factor increases, the disease’s rate of spread gets closer to what was observed in countries such as China, that took rigorous measures 
-						to stop the exponential growth of new infections. 
+						Auf dieser Website könnt ihr deutsche Städte eingeben und simulieren, wie viele Leben gerettet werden können, wenn der Social-Distancing-Faktor geändert wird. 
+						Ein Faktor von 0% modelliert, was passieren würde, wenn wir als Gesellschaft unser Verhalten überhaupt nicht ändern würden und trotzdem  Feiern, Essen und Socializen würden. 
+						Mit zunehmendem Faktor nähert sich die Ausbreitungsrate der Krankheit dem an, was in Ländern wie China (lol)
+						beobachtet wurde, wo strenge Maßnahmen ergriffen wurdem, das exponentielle Wachstum neuer Infektionen zu stoppen.
 						<br/><br/>
-						Our unique approach of showing lives saved instead of lost is an auspicious twist on the grim data usually made available. The data contained here is pulled daily automatically from Fusionbase, a partner of this 
-						year’s special HackaTUM edition. 
+						Unser  Ansatz, gerettete statt verlorene Leben zu zeigen, hat den Hintergrund, dass wir im Gegensatz zu den düsteren Zahlen, die man überall zu sehen bekommt, ein positives Ziel aufzeign wollen.
+						Die hier enthaltenen Daten werden täglich automatisch aus Fusionbase, einem Partner der diesjährigen HackaTUM-Sonderausgabe, abgerufen.
 						<br/><br/>
-						Admittedly, there can be bleak consequences to missing out on real social interactions for a long period of time. For that reason, governments are still allowing people to go out jogging on their own, for instance. 
-						Do make sure to get some movement and sunshine in once it a while.
+						Natürlich kann es schwere Folgen haben, wenn man über einen langen Zeitraum hinweg totaler sozialer Interaktionen ausgesetzt ist. Aus diesem Grund könnt ihr zum Beispiel immer noch alleine joggen 
+						gehen. Hin- und wieder frische Luft und Sonnenschein sind natürlich auch wichtig.
 						<br/><br/>
-						A more in-depth explanation going into the mathematical intricacies of our model is available as a download under the “Details for nerds” tab, where an interactive Matlab SIR Model app can also be found.
+						Eine ausführlichere Erläuterung der mathematischen Feinheiten unseres Modells findet Ihr als Download unter  „Details für Nerds“, wo ihr eine interaktive Matlab-SIR-Modell
+					    App herunterladen könnt.
 						<br/><br/>
-						We hope the new perspective provided by this tool helps fuel individual change that, when aggregated, results in a behavioral paradigm shift.
+						Wir hoffen die neue Perspektive welche unser Tool zur Verfügung stellt, hilft individuelles Verhalten zu ändern, was, je mehr Leute sich daran halten, zu einem Verhaltensparadigmawechsel führt.
 						<br/><br/>
-						So, should <i>I</i> stay home? The insights presented here speak for themselves: as much as possible, since it really makes a difference.
+						Also, sollte <i>ich</i> zu Hause bleiben? Die Zahlen sprechen eigentlich für sich selbst: so viel wie möglich, da es wirklich einen Unterschied macht.
 						<br/><br/>
 						Stay safe!
 					</p>
