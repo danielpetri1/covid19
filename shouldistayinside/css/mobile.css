@@ -193,6 +193,8 @@
 	#body.home div.body div div h1, #body.home div.body div div h2, #body.home div.body div div p {
 		width: 100%;
 	}
+
+	/*Controls image for the reload button*/
 	#body.home div.body div img {
 		display: block;
 		float: none;
@@ -214,15 +216,6 @@
 		
 		min-height: 60px;
 
-	}
-	#body div.body img {
-		display: block;
-		height: 15%;
-		left: 0;
-		margin: 0 auto;
-		padding: 0;
-		position: absolute;
-		width: 100%;
 	}
 	#body div.footer {
 		margin: 0;
@@ -278,10 +271,6 @@
 		background: none;
 		margin: 10% auto;
 		width: 90%;
-	}
-	#body div.blog .featured ul li img {
-		float: none;
-		margin: 5% auto;
 	}
 	#body div.blog .featured ul li div {
 		float: none;
@@ -386,9 +375,6 @@
 		width: 100%;
 	  }
 	  
-	  #close-image img{
-	  }
-	  
 	  #body .slideContainer{
 		  margin: 0 auto;
 		  width: 90%
@@ -402,7 +388,7 @@
 		font-size: 100px;
 	}
 
-	
 
+	
 
 }
