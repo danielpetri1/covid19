@@ -166,16 +166,15 @@ img {
 
 
 #body.home div.body {
-	margin: 0;
-	max-width: none;
+	margin: 0 auto;
+	max-width: 300px;
 	overflow: hidden;
 	padding: 0 0 35px;
-	width: 100%;
 }
 
 /*---------------------------------------------------*/
 #body.home div.body div {
-	max-width: 280px;
+	width: 280px;
 	margin: 0 auto;
 	padding: 0 0 0 0;
 	

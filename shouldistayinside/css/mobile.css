@@ -388,7 +388,9 @@
 		font-size: 100px;
 	}
 
-
+	#body.home div.body {
+		padding: 0 0 0 0;
+	}
 	
 
 }
