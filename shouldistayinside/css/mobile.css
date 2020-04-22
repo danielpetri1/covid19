@@ -18,10 +18,20 @@
 	#header div {
 		max-width: none;
 		overflow: hidden;
-		padding: 90px 0 13%;
+		padding: 15% 0 13%;
 		width: 100%;
 	}
 	
+	#header div .language{
+		display: block;
+		margin: 0 ;
+		padding: 0 0 0 0;
+		position: absolute;
+		right: 6%;
+		top: 15px;
+		width: 80px;
+		z-index: 999;
+	}
 	
 	#header span#mobile-navigation {
 		background: transparent url(../images/mobile/mobile-menu.png) no-repeat;
@@ -30,7 +40,7 @@
 		margin: 0;
 		padding: 0 0 0 0;
 		position: absolute;
-		right: 6%;
+		left: 6%;
 		top: 20px;
 		width: 50px;
 		z-index: 999;
@@ -160,19 +170,11 @@
 	#body.home div.header div {
 		margin: 0 auto;
 		max-width: 960px;
-		min-height: 470px;
+		min-height: auto;
 		padding: 0;
 		position: relative;
 	}
-	#body.home div.header img {
-		display: block;
-		height: 21%;
-		left: 0;
-		margin: 0 auto;
-		padding: 0;
-		position: absolute;
-		width: 100%;
-	}
+
 	#body.home div.header div a {
 		margin: 0 auto;
 		padding: 52px 0 0;
@@ -321,6 +323,29 @@
 		margin: 0 auto;
 		width: 90%;
 	}
+
+	#footer div {
+		margin: 0 auto;
+		width: 90%;
+		padding:  0 0 20 0;
+	}
+	
+	#footer div ul{
+		padding: 0 0 0 0;
+	}
+	#footer div ul .connect{
+		padding: 0 0 0 0;
+	}
+	
+	#footer .love{
+		padding: 10 0 0 0;
+	}
+	#footer .love p{
+			
+	}
+
+
+
 	#body div.footer .contact {
 		float: none;
 		margin: 0 auto;
@@ -352,4 +377,31 @@
 		padding: 0 0 35px;
 		width: 90%;
 	}
+
+	
+	
+	/*Stuff for the Slider and the input box*/
+	#body div.block{
+			
+		margin: 0 auto;
+		padding: 0 0 0 0;
+		width: 100%;
+	  }
+	  
+	  #close-image img{
+	  }
+	  
+	  #body .slideContainer{
+		  margin: 0 auto;
+		  width: 90%
+	  }
+	  
+	  #body .slider{
+		  width: 100%;
+	  }
+
+
+
+
+
 }

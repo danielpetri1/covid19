@@ -1,4 +1,7 @@
 
+
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -96,6 +99,7 @@ img {
 
 /*language selection*/
 #header div.language {
+	padding-right: 35px;
 	display: block;
 	float: right;
 }
@@ -171,7 +175,7 @@ img {
 
 /*---------------------------------------------------*/
 #body.home div.body div {
-	max-width: 960px;
+	max-width: 280px;
 	margin: 0 auto;
 	
 }
@@ -189,12 +193,13 @@ img {
 
 /*Text: how many people live in munich*/
 
+
+
 #body.home div.body div div.block {
-	width:auto;
+	width: auto;
 	display:grid;
     grid-template-columns: max-content max-content max-content;
 	grid-gap:8px;
-	padding-left: 37%;
 	
 }
 
@@ -216,7 +221,6 @@ img {
 /*-----------TextBox--------------*/
 #body.home div.body div input{
 	font-size: 20px;
-	display: block;
 }
 
 /*-----------Button---------------*/
