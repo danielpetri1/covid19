@@ -390,6 +390,7 @@
 
 	#body.home div.body {
 		padding: 0 0 0 0;
+		min-width: 350px;
 	}
 	
 
