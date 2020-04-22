@@ -159,6 +159,7 @@
 	#body{
 	}
 	#body.home {
+		
 	}
 	#body div.blog, #body div.singlepost {
 		margin: 0;
@@ -175,12 +176,8 @@
 		position: relative;
 	}
 
-	#body.home div.header div a {
-		margin: 0 auto;
-		padding: 52px 0 0;
-		position: relative;
-		right: 0;
-		top: 292px;
+	#body.home div.header div h2 {
+		font-size: 30px;
 	}
 	#body.home div.body div, #body.home div.footer div {
 		margin: 0 auto;
@@ -214,7 +211,9 @@
 		float: none;
 	}
 	#body div.body {
-		min-height: 280px;
+		
+		min-height: 60px;
+
 	}
 	#body div.body img {
 		display: block;
@@ -382,7 +381,6 @@
 	
 	/*Stuff for the Slider and the input box*/
 	#body div.block{
-			
 		margin: 0 auto;
 		padding: 0 0 0 0;
 		width: 100%;
@@ -400,8 +398,11 @@
 		  width: 100%;
 	  }
 
+	#body.home div.number h1{
+		font-size: 100px;
+	}
 
-
+	
 
 
 }

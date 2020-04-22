@@ -177,16 +177,22 @@ img {
 #body.home div.body div {
 	max-width: 280px;
 	margin: 0 auto;
+	padding: 0 0 0 0;
 	
 }
 
-#body.home div.body div h1 {
+#body.home div.number {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 20px 0 20px 0;
+}
+
+#body.home div.number h1{
 	color: #333333;
-	display: block;
 	margin: 0 auto;
 	padding-bottom: 25px;
 	float: initial;
-	font-size: 200px;
+	font-size: 170px;
 	text-align: center;
 	font-family: Arial, Sans-Serif, Helvetica;
 }
