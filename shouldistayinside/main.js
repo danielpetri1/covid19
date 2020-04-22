@@ -432,7 +432,7 @@ getDatabase().then(function(db){
       }
 
       if (this.value == 0){
-        sd_factor.innerHTML = this.value + "%" + " (life as usual 🌍)";
+        sd_factor.innerHTML = this.value + "%" + " (life as usual 🌍 / move the slider below 👇)";
       } else if (this.value <= 20){
         sd_factor.innerHTML = this.value + "%" + " (e.g. increasing hygiene 🧼🖐, decreasing parties 🥳)";
       } else if (this.value <= 30){
