@@ -59,6 +59,9 @@ img {
 	width: 100%;
 }
 
+
+
+
 /*scales the header div*/
 #header div {
 	margin: 0 auto;
@@ -66,6 +69,7 @@ img {
 	overflow: hidden;
 	padding: 0px 0px 0px;
 }
+
 
 /*says where the block inside header div is */
 #header div ul {
@@ -97,26 +101,51 @@ img {
 	text-transform: uppercase;
 }
 
+
+
 /*language selection*/
+
 #header div.language {
 	padding-right: 35px;
 	display: block;
 	float: right;
 }
 
-#header div.language ul li{
-	margin: 0 2px 0 2px;
+/*Languages represented by flags*/
+
+
+#header div.language a {
+	background: url(../images/flags.png) no-repeat;
+	display: block;
+	height: 30px;
+	padding-right: 20px;
+	text-indent: -99999px;
+	margin: 0 5px 10px;
+	width: 30px;
 }
 
-#header div.language a{
-	font-size: 15px;
-	font-family: lato-regular-webfont;
-	color: black
+
+#header .language a.german {
+	background-position: 0 0;
 }
-#header div.language p{
-	font-size: 12px;
-	font-family: lato-regular-webfont;
-	color: black
+
+#header .language a.english{
+	background-position: 0 -39px;
+}
+
+/*here is the positionind for the brazilian and italien flag
+#header .language a.portuges {
+	background-position: 0 -86px;
+}
+
+#header .language a.italian{
+	background-position: 0 -135px;
+}
+*/
+
+
+#header div.language ul li{
+	margin: 0 2px 0 2px;
 }
 
 /*colour of the selected link*/
