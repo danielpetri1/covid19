@@ -205,7 +205,7 @@ img {
 #body.home div.body div {
 	width: 280px;
 	margin: 0 auto;
-	padding: 0 25px 0 0;
+	padding: 0 25px 0 25px;
 	
 }
 
