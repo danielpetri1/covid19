@@ -199,7 +199,7 @@
 		display: block;
 		float: none;
 		margin: 0 auto;
-		padding: 0;
+		padding-right: 8px;
 		position: inherit;
 		width: 100%;
 	}
@@ -278,9 +278,7 @@
 		padding: 0;
 		width: 100%;
 	}
-	#body div.singlepost .featured img, #body div.singlepost .featured h1, #body div.singlepost .featured span, #body div.singlepost .featured p {
-		padding: 4% 0;
-	}
+	
 	#body div.blog .featured a.load, #body div.singlepost .featured a.load {
 		display: none;
 	}
@@ -299,10 +297,7 @@
 		padding: 5% 0;
 		width: 90%;
 	}
-	#body.contact div.body div div img{
-		float: none;
-		margin: 0 auto;
-	}
+	
 	#body.contact div.body div div h1, #body.contact div.body div div p{
 		padding: 0 0 0 4%;
 		width: 96%;
