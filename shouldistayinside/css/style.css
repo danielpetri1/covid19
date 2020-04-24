@@ -275,6 +275,7 @@ img {
 #close-image img {
 	display: block;
 	float: center;
+	padding-right: 5px;
     height: 35px;  
 	width: 35px;
 }
