@@ -126,7 +126,7 @@ img {
 
 
 #header .language a.german {
-	background-position: 0 0;
+	background-position: 0 -3px;
 }
 
 #header .language a.english{
@@ -135,11 +135,11 @@ img {
 
 /*here is the positionind for the brazilian and italien flag
 #header .language a.portuges {
-	background-position: 0 -86px;
+	background-position: 0 -80px;
 }
 
 #header .language a.italian{
-	background-position: 0 -135px;
+	background-position: 0 -121px;
 }
 */
 

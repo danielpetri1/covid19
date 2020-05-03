@@ -18,7 +18,7 @@
 	#header div {
 		max-width: none;
 		overflow: hidden;
-		padding: 15% 0 13%;
+		padding: 15% 0 15%;
 		width: 100%;
 	}
 	
@@ -28,10 +28,13 @@
 		padding: 0 0 0 0;
 		position: absolute;
 		right: 6%;
-		top: 15px;
+		top: 5px;
 		width: 80px;
 		z-index: 999;
 	}
+
+	
+	
 	
 	#header span#mobile-navigation {
 		background: transparent url(../images/mobile/mobile-menu.png) no-repeat;
