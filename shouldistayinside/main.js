@@ -516,22 +516,23 @@ getDatabase().then(function(db){
     }
 
       // ---------- RECOVERY RATES (Genesen / Covid19Faelle) --------------
-      var bayern = "0.79" 
-      var nordrheinWestfalen = "0.83"
-      var badenWuerttemberg = "0.77"
-      var niedersachsen = "0.82"
-      var hessen = "0.79"
-      var rheinlandPfalz = "0.85"
-      var berlin = "0.83"
-      var sachsen = "0.8"
-      var hamburg = "0.8"
-      var schleswigHolstein = "0.8"
-      var saarland = "0.81"
-      var brandenburg = "0.8"
-      var thueringen = "0.78"
-      var sachenAnhalt = "0.86"
-      var mecklenburg = "0.86"
-      var bremen = "0.57"
+
+      var bayern = "0.90834732446"
+      var nordrheinWestfalen = "0.9056764604"
+      var badenWuerttemberg = "0.91304347826"
+      var niedersachsen = "0.89056345264"
+      var hessen = "0.88235294117"
+      var rheinlandPfalz = "0.93783088791"
+      var berlin = "0.92911733852"
+      var sachsen = "0.89574995235"
+      var hamburg = "0.92665615142"
+      var schleswigHolstein = "0.91205211726"
+      var saarland = "0.91575091575"
+      var brandenburg = "0.92421441774"
+      var thueringen = "0.86266390614"
+      var sachenAnhalt = "0.94228504122"
+      var mecklenburg = "0.92105263157"
+      var bremen = "0.83207261724"
       // ---------- RECOVERY RATES --------------
       
 
